@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>Nursing Ethics QBank (Lectures 1-3)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg1:#0a0f1f;--bg2:#0a0f1f;--bg3:#0a0f1f;--primary:#4fc3f7;--primary-dark:#0288d1;--accent:#ffd54f;--danger:#ef5350;--success:#66bb6a;--text:#e2e8f0;--muted:#a0aec0;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,0.4);--glow:0 0 25px rgba(79,195,247,0.12);--max-width:600px;--bg-card:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.06)}
+body.light{--bg1:#fff;--bg2:#fff;--bg3:#fff;--bg-card:#fff;--border-card:#ccc;--text:#000;--muted:#555;--primary:#1565c0;--primary-dark:#0d47a1;--accent:#f9a825;--danger:#c62828;--success:#2e7d32;--shadow:0 2px 8px rgba(0,0,0,0.08);--glow:none;background:#fff!important;background-image:none!important;animation:none!important}
+body{font-family:"Tahoma","Segoe UI","Cairo",sans-serif;background:var(--bg1);min-height:100vh;color:var(--text);display:flex;flex-direction:column;align-items:center;padding:12px 10px;transition:background .4s,color .3s}
+.app{width:100%;max-width:var(--max-width);position:relative;z-index:1}
+.top-header{text-align:center;padding:8px 0 4px}
+.top-header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body.light .top-header h1{background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;color:#000;text-shadow:none}
+.top-header .sub{font-size:.9rem;color:var(--primary);font-weight:600}
+.top-header .creator{font-size:.7rem;color:var(--muted);margin-top:4px}
+.top-header .creator .name{color:var(--text);font-weight:700}
+body.light .top-header .creator .name{color:#000}
+.theme-toggle-wrap{display:flex;justify-content:flex-end;margin-bottom:6px}
+.theme-toggle{display:flex;background:var(--bg-card);border:1px solid var(--border-card);border-radius:30px;padding:3px;gap:2px}
+.theme-toggle button{background:transparent;border:none;padding:4px 14px;border-radius:30px;font-size:.8rem;color:var(--muted);cursor:pointer;transition:.3s}
+.theme-toggle button.active{background:var(--primary);color:#fff;font-weight:700}
+body.light .theme-toggle button.active{background:#1565c0;color:#fff}
+.card{background:var(--bg-card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border-card);border-radius:var(--radius);box-shadow:var(--shadow),var(--glow);padding:16px 14px;margin-bottom:14px;transition:transform .2s,background .3s,border .3s;color:var(--text)}
+body.light .card{background:#fff;border:1px solid #ccc;backdrop-filter:none}
+.card-title{margin:0 0 12px;font-size:1rem;border-inline-start:3px solid var(--primary);padding-inline-start:10px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.card-title i{color:var(--accent);margin-left:6px}
+.card-title .select-all-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--muted);border-radius:12px;padding:2px 12px;font-size:.7rem;cursor:pointer;transition:.2s;font-weight:600}
+body.light .card-title .select-all-btn{background:#f0f0f0;border-color:#ccc;color:#333}
+.card-title .select-all-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.action-icons{display:flex;justify-content:space-around;gap:6px;flex-wrap:wrap}
+.action-icon{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:6px 14px;border-radius:12px;border:1.5px solid transparent;background:transparent;color:var(--muted);font-size:.7rem;font-weight:600;min-width:56px}
+.action-icon .icon{font-size:1.5rem}
+.action-icon .label{font-size:.55rem}
+.action-icon.active{border-color:var(--primary);background:rgba(79,195,247,0.08)}
+body.light .action-icon.active{border-color:#1565c0;background:#e3f2fd}
+.sub-options{display:none;padding:8px 10px;margin-top:6px;background:rgba(0,0,0,0.15);border-radius:12px;border:1px solid var(--border-card);flex-wrap:wrap;gap:6px;justify-content:center}
+body.light .sub-options{background:#f5f5f5;border-color:#ccc}
+.sub-options.show{display:flex}
+.sub-options .action-btn{border:1px solid var(--border-card);background:rgba(255,255,255,0.03);border-radius:12px;padding:5px 16px;font-size:.75rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+body.light .sub-options .action-btn{background:#fff;border-color:#ccc;color:#333}
+.sub-options .action-btn.active{border-color:var(--primary);background:rgba(79,195,247,0.12);color:var(--text)}
+body.light .sub-options .action-btn.active{border-color:#1565c0;background:#bbdefb;color:#000}
+.section-list{display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto}
+.section-item{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border-card);border-radius:10px;padding:8px 12px;cursor:pointer;transition:all .15s;font-size:.85rem;color:var(--text);gap:8px}
+body.light .section-item{border-color:#ccc}
+.section-item.active{border-color:var(--primary);background:rgba(79,195,247,0.08)}
+body.light .section-item.active{border-color:#1565c0;background:#e3f2fd}
+.section-item span:first-child{flex:1}
+.section-item .cnt{background:rgba(255,255,255,0.06);border-radius:30px;padding:0 10px;font-size:.7rem;color:var(--muted);font-weight:700;min-width:30px;text-align:center}
+body.light .section-item .cnt{background:#ddd;color:#333}
+.section-item .info-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 4px}
+.section-item .info-btn:hover{color:var(--primary)}
+#section-explanation{margin-top:12px;padding:16px;background:rgba(0,0,0,0.15);border-radius:var(--radius);border:1px solid var(--border-card);display:none}
+body.light #section-explanation{background:#f5f5f5;border-color:#ccc}
+#section-explanation.show{display:block}
+.explain-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.explain-controls{display:flex;gap:6px;align-items:center}
+.explain-controls .lang-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--muted);padding:4px 10px;border-radius:20px;font-size:.7rem;cursor:pointer;font-weight:600}
+body.light .explain-controls .lang-btn{background:#fff;border-color:#ccc;color:#333}
+.explain-controls .lang-btn.active{border-color:var(--primary);background:rgba(79,195,247,0.12);color:var(--text)}
+body.light .explain-controls .lang-btn.active{border-color:#1565c0;background:#bbdefb;color:#000}
+.explain-controls .close-explain{background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer}
+.explain-controls .close-explain:hover{color:var(--danger)}
+#explain-text{font-size:.9rem;line-height:2;color:var(--text);background:rgba(0,0,0,0.1);padding:12px;border-radius:10px;min-height:60px;white-space:pre-wrap}
+#explain-text.en{direction:ltr;text-align:left}
+#explain-text.ar{direction:rtl;text-align:right}
+body.light #explain-text{background:#fff;color:#000;border:1px solid #ccc}
+.big-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(79,195,247,0.25);transition:all .15s;position:relative;overflow:hidden;margin-bottom:14px}
+body.light .big-btn{background:#1565c0;color:#fff;box-shadow:0 2px 8px rgba(21,101,192,0.3)}
+.big-btn.secondary{background:linear-gradient(135deg,#4a5568,#2d3748)}
+body.light .big-btn.secondary{background:#757575}
+.big-btn.warn{background:linear-gradient(135deg,var(--accent),#f57f17)}
+body.light .big-btn.warn{background:#f9a825;color:#000}
+.big-btn:disabled{opacity:.5;cursor:not-allowed}
+.stats-row{display:flex;justify-content:space-around;gap:8px;text-align:center;margin:6px 0}
+.stats-row .stat .num{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,var(--primary),#81d4fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body.light .stats-row .stat .num{background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;color:#000}
+.stats-row .stat .lbl{font-size:.7rem;color:var(--muted)}
+.progress-stats{display:flex;align-items:center;gap:16px}
+.progress-ring{position:relative;width:70px;height:70px;flex-shrink:0}
+.progress-ring svg{transform:rotate(-90deg);width:70px;height:70px}
+.progress-ring .bg{fill:none;stroke:var(--border-card);stroke-width:6}
+body.light .progress-ring .bg{stroke:#ccc}
+.progress-ring .fg{fill:none;stroke:var(--primary);stroke-width:6;stroke-linecap:round;stroke-dasharray:176;stroke-dashoffset:176;transition:stroke-dashoffset .6s}
+body.light .progress-ring .fg{stroke:#1565c0}
+.progress-ring .center-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;color:var(--text)}
+.weak-link{margin-top:10px;font-size:.75rem;color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:6px}
+.weak-link i{color:var(--accent)}
+.action-row-bottom{display:flex;gap:8px;margin-top:10px}
+.action-row-bottom .big-btn{flex:1;font-size:.75rem;padding:8px;margin-top:0;margin-bottom:0}
+#screen-quiz,#screen-results{display:none}
+#screen-quiz.active,#screen-results.active{display:block}
+.quiz-meta{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted);margin-bottom:8px}
+#timer-badge{font-weight:600;font-size:.8rem;background:rgba(255,255,255,0.05);padding:2px 12px;border-radius:30px;border:1px solid var(--border-card)}
+body.light #timer-badge{background:#f0f0f0;border-color:#ccc}
+#timer-badge.warn{background:rgba(255,213,79,0.15);border-color:var(--accent);color:var(--accent)}
+#timer-badge.danger{background:rgba(239,83,80,0.2);border-color:var(--danger);color:var(--danger);animation:pulse .7s infinite alternate}
+@keyframes pulse{0%{opacity:1}100%{opacity:.5}}
+.progress-wrap{background:rgba(255,255,255,0.06);border-radius:30px;height:4px;overflow:hidden;margin-bottom:12px}
+body.light .progress-wrap{background:#ddd}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:0%;transition:width .3s}
+body.light .progress-bar{background:linear-gradient(90deg,#1565c0,#f9a825)}
+.grid-toggle-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--primary);padding:3px 10px;border-radius:20px;font-size:.75rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-weight:600;transition:.2s}
+body.light .grid-toggle-btn{background:#e0f7fa;border-color:#b2ebf2;color:#0077a3}
+.grid-toggle-btn:hover{background:rgba(0,212,255,0.15)}
+#questions-grid-container{margin-bottom:12px;padding:12px;background:rgba(0,0,0,0.2);border-radius:12px;border:1px solid var(--border-card);display:none}
+body.light #questions-grid-container{background:#f8fafc;border-color:#ddd}
+#questions-grid-container.show{display:block}
+.grid-title{font-size:.75rem;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(36px,1fr));gap:6px;max-height:160px;overflow-y:auto;padding-right:2px}
+.grid-btn{width:100%;height:34px;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:.8rem;font-weight:700;border:1px solid var(--border-card);background:rgba(255,255,255,0.03);color:var(--muted);cursor:pointer;transition:all .15s}
+body.light .grid-btn{background:#fff;border-color:#ccc;color:#333}
+.grid-btn:hover{border-color:var(--primary);color:var(--primary)}
+.grid-btn.current{border:2px solid var(--primary)!important;box-shadow:0 0 10px rgba(0,212,255,0.4);font-weight:900}
+.grid-btn.answered-correct{background:rgba(52,211,153,0.15)!important;border-color:var(--success)!important;color:var(--success)!important}
+body.light .grid-btn.answered-correct{background:#e8f5e9!important;border-color:#2e7d32!important;color:#2e7d32!important}
+.grid-btn.answered-wrong{background:rgba(239,83,80,0.15)!important;border-color:var(--danger)!important;color:var(--danger)!important}
+body.light .grid-btn.answered-wrong{background:#ffebee!important;border-color:#c62828!important;color:#c62828!important}
+.q-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.q-tag{display:inline-block;background:rgba(79,195,247,0.10);color:var(--primary);font-size:.65rem;font-weight:700;padding:2px 12px;border-radius:30px;border:1px solid rgba(79,195,247,0.06)}
+body.light .q-tag{background:#e3f2fd;color:#1565c0;border-color:#bbdefb}
+.q-en{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.6;direction:ltr;text-align:left;word-wrap:break-word}
+.q-ar{font-size:.9rem;color:var(--muted);margin-bottom:14px;line-height:1.7;direction:rtl;text-align:right;word-wrap:break-word}
+.options{display:flex;flex-direction:column;gap:8px}
+.option{display:flex;align-items:center;gap:8px;border:1px solid var(--border-card);border-radius:12px;padding:10px 14px;cursor:pointer;transition:all .15s;background:rgba(255,255,255,0.02);direction:ltr}
+body.light .option{background:#fff;border-color:#ccc}
+.option .opt-en{font-weight:600;color:var(--text);font-size:.9rem;flex:1;direction:ltr;text-align:left}
+.option .opt-ar{color:var(--muted);font-size:.8rem;direction:rtl;text-align:right;flex:1}
+.option .mark{font-size:1.1rem;width:24px;text-align:center;flex-shrink:0}
+.option.selected{border-color:var(--primary);background:rgba(79,195,247,0.06)}
+body.light .option.selected{border-color:#1565c0;background:#e3f2fd}
+.option.correct{border-color:var(--success);background:rgba(102,187,106,0.08)}
+body.light .option.correct{border-color:#2e7d32;background:#e8f5e9}
+.option.wrong{border-color:var(--danger);background:rgba(239,83,80,0.08)}
+body.light .option.wrong{border-color:#c62828;background:#ffebee}
+.option.disabled{cursor:default;opacity:.8}
+.feedback-box{margin-top:12px;padding:12px;border-radius:12px;font-size:.85rem;line-height:1.6}
+.feedback-box.correct{background:rgba(102,187,106,0.08);border:1px solid rgba(102,187,106,0.15);color:#a7f3d0}
+body.light .feedback-box.correct{background:#e8f5e9;border-color:#2e7d32;color:#000}
+.feedback-box.wrong{background:rgba(239,83,80,0.08);border:1px solid rgba(239,83,80,0.15);color:#fecaca}
+body.light .feedback-box.wrong{background:#ffebee;border-color:#c62828;color:#000}
+.feedback-box .fb-title{font-weight:700;margin-bottom:4px}
+.nav-row{display:flex;gap:8px;margin-top:12px}
+.nav-row .big-btn{flex:1;margin-top:0;margin-bottom:0;font-size:.85rem;padding:10px}
+.score-circle{width:120px;height:120px;border-radius:50%;margin:8px auto 14px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:conic-gradient(var(--primary) calc(var(--pct)*1%),rgba(255,255,255,0.04) 0);position:relative}
+body.light .score-circle{background:conic-gradient(#1565c0 calc(var(--pct)*1%),#e0e0e0 0)}
+.score-circle::before{content:"";position:absolute;width:90px;height:90px;background:var(--bg1);backdrop-filter:blur(4px);border-radius:50%;opacity:.85}
+body.light .score-circle::before{background:#fff;opacity:.9}
+.score-circle .pct{position:relative;font-size:1.8rem;font-weight:900;color:#fff}
+body.light .score-circle .pct{color:#000}
+.score-circle .lbl{position:relative;font-size:.7rem;color:var(--muted)}
+.mistake-item{border:1px solid var(--border-card);border-radius:12px;padding:12px;margin-bottom:10px;background:rgba(255,255,255,0.02)}
+body.light .mistake-item{background:#fff;border-color:#ccc}
+.mistake-item .m-q{font-weight:700;margin-bottom:2px;direction:ltr;text-align:left}
+.mistake-item .m-you{color:var(--danger);font-size:.8rem}
+body.light .mistake-item .m-you{color:#c62828}
+.mistake-item .m-correct{color:var(--success);font-size:.8rem}
+body.light .mistake-item .m-correct{color:#2e7d32}
+.mistake-toggle{background:none;border:1px solid var(--border-card);border-radius:8px;padding:4px 12px;cursor:pointer;color:var(--text);font-size:.75rem;margin-top:6px}
+body.light .mistake-toggle{border-color:#ccc;color:#000}
+.mistake-detail{margin-top:10px;border:1px solid var(--border-card);border-radius:10px;padding:12px;background:rgba(255,255,255,0.03);direction:ltr;text-align:left}
+body.light .mistake-detail{background:#f9f9f9;border-color:#ccc}
+.mistake-detail .opt-row{display:flex;align-items:center;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border-card)}
+body.light .mistake-detail .opt-row{border-color:#ddd}
+.mistake-detail .opt-row:last-child{border-bottom:none}
+.mistake-detail .opt-label{flex:1}
+.mistake-detail .opt-status{font-size:1rem;margin-left:8px}
+.hidden{display:none!important}
+footer{text-align:center;color:var(--muted);font-size:.7rem;margin-top:20px;margin-bottom:8px;opacity:.6}
+footer .name{color:var(--primary);font-weight:700}
+body.light footer .name{color:#1565c0}
+.word-en{display:inline-block;cursor:default;transition:background .15s,transform .1s;padding:1px 2px;border-radius:4px;direction:ltr}
+.word-en:active{background:rgba(79,195,247,0.15);transform:scale(.97)}
+body.light .word-en:active{background:#bbdefb}
+.word-en.speaking{background:rgba(255,213,79,0.25);box-shadow:0 0 10px rgba(255,213,79,0.2)}
+body.light .word-en.speaking{background:#fff9c4}
+.speech-hint{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);color:#fff;padding:6px 18px;border-radius:30px;font-size:.8rem;pointer-events:none;opacity:0;transition:opacity .3s;z-index:999;border:1px solid rgba(255,255,255,0.1)}
+body.light .speech-hint{background:#f0f0f0;color:#000;border-color:#ccc}
+.speech-hint.show{opacity:1}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.25);transform:scale(0);animation:rippleAnim .5s linear;pointer-events:none}
+body.light .ripple{background:rgba(0,0,0,0.1)}
+@keyframes rippleAnim{to{transform:scale(3);opacity:0}}
+@media(max-width:480px){body{padding:8px 6px}.app{max-width:100%}.top-header h1{font-size:1.5rem}.card{padding:12px 10px}.action-icon{padding:4px 8px;min-width:44px}.action-icon .icon{font-size:1.2rem}.q-en{font-size:.9rem}.q-ar{font-size:.8rem}.option{padding:8px 10px}.big-btn{font-size:.85rem;padding:10px}.score-circle{width:100px;height:100px}.score-circle::before{width:75px;height:75px}.score-circle .pct{font-size:1.5rem}.progress-ring{width:56px;height:56px}.progress-ring svg{width:56px;height:56px}}
+.tf-badge{display:inline-block;font-size:.6rem;font-weight:700;padding:1px 8px;border-radius:12px;margin-right:6px;background:rgba(79,195,247,0.15);color:var(--primary)}
+body.light .tf-badge{background:#e3f2fd;color:#1565c0}
+.q-en.new-question{color:#ff9800}
+.q-ar.new-question{color:#ff9800}
+body.light .q-en.new-question,body.light .q-ar.new-question{color:#ef6c00}
+.grid-btn.new-question{border:1.5px solid #ff9800!important;color:#ff9800!important;font-weight:800}
+body.light .grid-btn.new-question{border-color:#ef6c00!important;color:#ef6c00!important}
+.grid-btn.new-question.answered-correct{border-color:var(--success)!important;color:var(--success)!important}
+body.light .grid-btn.new-question.answered-correct{border-color:#2e7d32!important;color:#2e7d32!important}
+.grid-btn.new-question.answered-wrong{border-color:var(--danger)!important;color:var(--danger)!important}
+body.light .grid-btn.new-question.answered-wrong{border-color:#c62828!important;color:#c62828!important}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top-header"><h1> استعِن باللَّهِ ولا تعجِزْ ♥️ </h1><div class="sub">Nursing Ethics (Lectures 1-3)</div><div class="creator"><i class="fas fa-user-nurse"></i> Created by <span class="name">MR. YASSIN THARWAT</span></div></div>
+<div class="theme-toggle-wrap"><div class="theme-toggle" id="themeToggle"><button class="active" data-theme="dark" onclick="setTheme('dark')"><i class="fas fa-moon"></i></button><button data-theme="light" onclick="setTheme('light')"><i class="fas fa-sun"></i></button></div></div>
+
+<div id="main-screen">
+<div class="card"><div class="card-title"><i class="fas fa-sliders-h"></i> الإجراءات</div>
+<div class="action-icons">
+<div class="action-icon active" data-target="modeOptions" onclick="toggleOptions('modeOptions')"><span class="icon">🎯</span><span class="label">المذاكرة</span></div>
+<div class="action-icon" data-target="orderOptions" onclick="toggleOptions('orderOptions')"><span class="icon">🔀</span><span class="label">الترتيب</span></div>
+<div class="action-icon" data-target="langOptions" onclick="toggleOptions('langOptions')"><span class="icon">🌐</span><span class="label">اللغة</span></div>
+<div class="action-icon" data-target="timerOptions" onclick="toggleOptions('timerOptions')"><span class="icon">⏱️</span><span class="label">المؤقت</span></div>
+</div>
+<div id="modeOptions" class="sub-options show"><button class="action-btn active" data-mode="practice" onclick="selectMode('practice')">تدريب</button><button class="action-btn" data-mode="test" onclick="selectMode('test')">اختبار</button></div>
+<div id="orderOptions" class="sub-options"><button class="action-btn active" data-order="device" onclick="selectOrder('device')">بالترتيب</button><button class="action-btn" data-order="random" onclick="selectOrder('random')">عشوائي</button></div>
+<div id="langOptions" class="sub-options"><button class="action-btn active" data-translate="yes" onclick="selectTranslate('yes')">ترجمة</button><button class="action-btn" data-translate="no" onclick="selectTranslate('no')">EN</button></div>
+<div id="timerOptions" class="sub-options"><button class="action-btn active" data-timer="0" onclick="selectTimer(0)">تثبيت</button><button class="action-btn" data-timer="5" onclick="selectTimer(5)">5s</button><button class="action-btn" data-timer="10" onclick="selectTimer(10)">10s</button></div>
+</div>
+
+<div class="card"><div class="card-title"><span><i class="fas fa-layer-group"></i> الأجزاء المختارة</span><button class="select-all-btn" id="selectAllBtn" onclick="toggleAllSections()">إلغاء الكل</button></div><div id="section-list" class="section-list"></div>
+<div id="section-explanation"><div class="explain-header"><h3 id="explain-title"></h3><div class="explain-controls"><button class="lang-btn active" data-lang="ar" onclick="setExplainLang('ar')">🇪🇬 عربي</button><button class="lang-btn" data-lang="en" onclick="setExplainLang('en')">🇬🇧 English</button><button class="close-explain" onclick="closeExplanation()"><i class="fas fa-times"></i></button></div></div><div id="explain-text" class="ar"></div></div></div>
+
+<button class="big-btn" onclick="startQuiz()"><i class="fas fa-play"></i> أبداً المذاكرة</button>
+
+<div class="card" id="progressCard"><div class="card-title"><i class="fas fa-chart-line"></i> تقدمك</div>
+<div class="progress-stats"><div class="progress-ring"><svg viewBox="0 0 70 70"><circle class="bg" cx="35" cy="35" r="28"/><circle class="fg" id="progressCircle" cx="35" cy="35" r="28" stroke-dashoffset="176"/></svg><div class="center-text" id="progressPercent">0<small>%</small></div></div>
+<div class="stats-row" style="flex:1;margin:0;"><div class="stat"><div class="num" id="statAttempted">0</div><div class="lbl">تم حله</div></div><div class="stat"><div class="num" id="statCorrect">0</div><div class="lbl">صح</div></div><div class="stat"><div class="num" id="statWrong">0</div><div class="lbl">غلط</div></div></div></div>
+<div class="weak-link" id="weakLink" onclick="startWeakSectionQuiz()"><i class="fas fa-lightbulb"></i> أضعف نقطة: <span id="weakSectionName">-</span> (<span id="weakSectionRate">0%</span>)</div>
+<div class="action-row-bottom"><button class="big-btn warn" onclick="reviewMistakes()"><i class="fas fa-undo-alt"></i> راجع أخطائي</button><button class="big-btn secondary" onclick="resetProgress()"><i class="fas fa-trash-alt"></i> تصفير</button></div></div>
+</div>
+
+<div id="screen-quiz">
+<div class="quiz-meta">
+  <span id="quiz-position"><i class="fas fa-question-circle"></i> 1 / 10</span>
+  <span id="timer-badge" class="hidden"><i class="fas fa-hourglass-half"></i> 30</span>
+  <span id="quiz-score"><i class="fas fa-check-circle" style="color:var(--success);"></i> 0 <i class="fas fa-times-circle" style="color:var(--danger);margin-right:6px;"></i> 0</span>
+</div>
+<div class="progress-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+
+<div id="questions-grid-container">
+  <div class="grid-title">
+    <span><i class="fas fa-th"></i> انتقل مباشرة لأي سؤال:</span>
+    <span style="font-size:0.65rem; color:var(--muted);"><span style="color:var(--success);">صح</span> | <span style="color:var(--danger);">غلط</span> | <span style="color:#ff9800;">جديد</span></span>
+  </div>
+  <div class="q-grid" id="q-grid-buttons"></div>
+</div>
+
+<div class="card">
+  <div class="q-header">
+    <div class="q-tag" id="q-section-tag"><i class="fas fa-tag"></i> القسم</div>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <button class="grid-toggle-btn" id="btn-toggle-trans" onclick="toggleQuizTranslation()"><i class="fas fa-language"></i> ترجمة</button>
+      <button class="grid-toggle-btn" id="btn-toggle-grid" onclick="toggleQuestionsGrid()"><i class="fas fa-th-large"></i> شبكة الأسئلة</button>
+    </div>
+  </div>
+  <div class="q-en" id="q-en"></div>
+  <div class="q-ar" id="q-ar"></div>
+  <div class="options" id="options"></div>
+  <div id="feedback" class="feedback-box hidden"></div>
+  <div class="nav-row">
+    <button class="big-btn secondary" id="btn-quit" onclick="quitQuiz()" style="flex:0 0 60px;"><i class="fas fa-sign-out-alt"></i></button>
+    <button class="big-btn secondary" id="btn-prev" onclick="previousQuestion()" disabled><i class="fas fa-arrow-right"></i></button>
+    <button class="big-btn" id="btn-next" onclick="nextQuestion()" disabled><i class="fas fa-arrow-left"></i> التالي</button>
+  </div>
+</div>
+</div>
+
+<div id="screen-results"><div class="card" style="text-align:center;"><div class="card-title" style="border:none;text-align:center;padding:0;"><i class="fas fa-trophy" style="color:var(--accent);"></i> نتيجتك</div><div class="score-circle" id="score-circle" style="--pct:0;"><div class="pct" id="result-pct">0%</div><div class="lbl">النسبة</div></div><div class="stats-row"><div class="stat"><div class="num" id="res-total">0</div><div class="lbl">إجمالي</div></div><div class="stat"><div class="num" id="res-correct" style="color:var(--success);">0</div><div class="lbl">صح</div></div><div class="stat"><div class="num" id="res-wrong" style="color:var(--danger);">0</div><div class="lbl">غلط</div></div></div><button class="big-btn" onclick="goHome()"><i class="fas fa-home"></i> الرئيسية</button><button class="big-btn warn hidden" id="btn-show-mistakes" onclick="showMistakesList()"><i class="fas fa-list-ul"></i> الأخطاء</button></div><div id="mistakes-list-wrap" class="card hidden"><div class="card-title"><i class="fas fa-exclamation-triangle" style="color:var(--danger);"></i> أخطائك</div><div id="mistakes-list"></div></div></div>
+
+<div id="speech-hint" class="speech-hint"><i class="fas fa-volume-up"></i> جارٍ النطق...</div>
+<footer>Created by <span class="name">MR. YASSIN THARWAT</span></footer>
+</div>
+
+<script>
+function M(en, ar, pairs, c, explain_ar, isNew) {
+  var q = {
+    en: en,
+    ar: ar || "",
+    options: pairs.map(function (p) {
+      var pts = p.split("|");
+      return { en: pts[0], ar: pts[1] || "", correct: false };
+    }),
+    explain_ar: explain_ar || ""
+  };
+  if (q.options[c]) q.options[c].correct = true;
+  if (isNew) q.isNew = true;
+  return q;
+}
+function T(en, ar, isTrue, explain_ar, isNew) {
+  var q = { en: en, ar: ar || "", isTF: true, correct: !!isTrue, explain_ar: explain_ar || "" };
+  if (isNew) q.isNew = true;
+  return q;
+}
+
+const ORIGINAL_BANK = [
+  {
+    name: "تعريف المصطلحات",
+    nameEn: "Definition of Terms",
+    questions: [
+      M("Which term reflects the principles or standards that govern proper conduct related to professional behavior?","أي مصطلح يعكس المبادئ أو المعايير التي تحكم السلوك السليم المتعلق بالسلوك المهني؟",["Ethics|الأخلاق","Values|القيم","Competence|الكفاءة","Law|القانون"],0,"الأخلاق: تعكس المبادئ التي تحكم السلوك المهني السليم."),
+      M("Abstract standards that give a person a sense of what is right and wrong and establish a code of conduct for living are:","المعايير المجردة التي تعطي الشخص إحساساً بما هو صواب وخطأ وتؤسس مدونة سلوك للحياة هي:",["Judgment|الحكم","Law|القانون","Values|القيم","Accountability|المحاسبة"],2,"القيم: معايير مجردة تحدد الصواب والخطأ."),
+      M("The codification of values that a community holds in common is:","تقنين القيم التي يشترك فيها المجتمع هي:",["Fidelity|الوفاء","Law|القانون","Values|القيم","Ethics|الأخلاق"],1,"القانون هو تقنين القيم المشتركة."),
+      M("Which statement defines nursing ethics?","أي عبارة تحدد أخلاقيات التمريض؟",["Duties and obligations of nurses to clients, other health professionals, the profession and the community|واجبات والتزامات الممرض تجاه المرضى والمهنيين والمهنة والمجتمع","Rules about hospital buildings|قواعد حول مباني المستشفى","Drug dosage tables|جداول جرعات الأدوية","Salary regulations|لوائح الرواتب"],0,"واجبات والتزامات الممرض تجاه المرضى والمهنيين والمهنة والمجتمع."),
+      M("Professional nursing is a group of people with:","التمريض المهني هو مجموعة من الأشخاص لديهم:",["Only experience|خبرة فقط","No special training|لا تدريب خاص","Only a license fee|رسم ترخيص فقط","Specialized education, knowledge and skills serving specific social needs|تعليم متخصص ومعرفة ومهارات تخدم احتياجات اجتماعية محددة"],3,"تعليم متخصص ومعرفة ومهارات."),
+      M("Which term answers 'what is right and wrong' for a person?","أي مصطلح يجيب على 'ما هو الصواب والخطأ' للشخص؟",["Values|القيم","Veracity|الصدق","Responsibility|المسؤولية","Law|القانون"],0,"القيم."),
+      T("Ethics reflects principles or standards that govern proper conduct related to professional behavior.","الأخلاق تعكس المبادئ أو المعايير التي تحكم السلوك السليم المتعلق بالسلوك المهني.",1,"صح."),
+      T("Law refers to the principles that govern proper conduct related to professional behavior.","القانون يشير إلى المبادئ التي تحكم السلوك السليم المتعلق بالسلوك المهني.",0,"خطأ: هذا تعريف الأخلاقيات."),
+      T("Law refers to the codification of values a community holds in common.","القانون يشير إلى تقنين القيم التي يشترك فيها المجتمع.",1,"صح."),
+      T("Ethics is the codification of values that a community holds in common.","الأخلاق هي تقنين القيم التي يشترك فيها المجتمع.",0,"خطأ: هذا تعريف القانون."),
+      T("Nursing ethics state the duties of nurses to clients, other professionals, the profession and the community.","أخلاقيات التمريض تنص على واجبات الممرض تجاه المرضى والمهنيين والمهنة والمجتمع.",1,"صح."),
+      T("Values are concrete rules written in statutes.","القيم هي قواعد ملموسة مكتوبة في القوانين.",0,"خطأ: معايير مجردة (القانون هو التقنين)."),
+      M("Which term refers to principles or standards that govern proper professional conduct?","أي مصطلح يشير إلى المبادئ أو المعايير التي تحكم السلوك المهني السليم؟",["Law|القانون","Ethics|الأخلاق","Accountability|المحاسبة","Competence|الكفاءة"],1,"الأخلاق: المبادئ أو المعايير التي تحكم السلوك المهني السليم.",1),
+      M("Which concept gives a person a sense of what is right and wrong and establishes a code of conduct for living?","أي مفهوم يمنح الشخص إحساساً بما هو صواب وخطأ ويؤسس مدونة سلوك للحياة؟",["Values|القيم","Justice|العدالة","Fidelity|الوفاء","Law|القانون"],0,"القيم: معايير مجردة تحدد الصواب والخطأ.",1),
+      T("Nursing ethics is concerned with principles of right and wrong conduct in nursing practice.","أخلاقيات التمريض تهتم بمبادئ السلوك الصحيح والخاطئ في ممارسة التمريض.",1,"صح: أخلاقيات التمريض تهتم بمبادئ السلوك.",1),
+      T("Law refers to the codification of values held in common by a community.","يشير القانون إلى تقنين القيم التي يشترك فيها المجتمع.",1,"صح: القانون هو تقنين القيم المشتركة.",1)
+    ]
+  },
+  {
+    name: "الفرق بين القانون والأخلاق",
+    nameEn: "Differentiation Between Law and Ethics",
+    questions: [
+      M("The source of law is:","مصدر القانون هو:",["Internal: values and beliefs|داخلي: القيم والمعتقدات","Personal feelings|المشاعر الشخصية","Religion only|الدين فقط","External to oneself: rules and regulations of society|خارجي عن الذات: قواعد وأنظمة المجتمع"],3,"خارجية: قواعد وأنظمة المجتمع."),
+      M("The source of ethics is:","مصدر الأخلاق هو:",["Courts|المحاكم","Board of nursing|مجلس التمريض","Internal to oneself: values, beliefs and individual interpretations|داخلي للذات: القيم والمعتقدات والتفسيرات الفردية","Statutes|القوانين"],2,"داخلية."),
+      M("Law is enforced by:","القانون يفرضه:",["Patients|المرضى","Courts, statutes and board of nursing|المحاكم والقوانين ومجلس التمريض","Ethics committees|لجان الأخلاقيات","Family|الأسرة"],1,"المحاكم والقوانين ومجلس التمريض."),
+      M("Ethics is enforced by:","الأخلاق تفرضها:",["Courts|المحاكم","Police only|الشرطة فقط","Statutes|القوانين","Ethics committees and professional organizations|لجان الأخلاقيات والمنظمات المهنية"],3,"لجان الأخلاقيات والمنظمات المهنية."),
+      M("The Board of Nursing enforces:","مجلس التمريض يفرض:",["Values only|القيم فقط","Beliefs only|المعتقدات فقط","Law|القانون","Ethics only|الأخلاق فقط"],2,"القانون."),
+      M("Professional organizations enforce:","المنظمات المهنية تفرض:",["Courts|المحاكم","Ethics|الأخلاق","Law|القانون","Statutes|القوانين"],1,"الأخلاق."),
+      T("The source of law is internal to oneself: values and beliefs.","مصدر القانون داخلي للذات: القيم والمعتقدات.",0,"خطأ: مصدر القانون خارجي."),
+      T("Laws have an external source: rules and regulations of society.","القوانين لها مصدر خارجي: قواعد وأنظمة المجتمع.",1,"صح."),
+      T("Ethics is enforced by courts and statutes.","الأخلاق يفرضها المحاكم والقوانين.",0,"خطأ: هذا للقانون."),
+      T("Law is enforced by ethics committees and professional organizations.","القانون تفرضه لجان الأخلاقيات والمنظمات المهنية.",0,"خطأ: هذه تنفذ الأخلاقيات."),
+      T("Ethics has an internal source: values, beliefs and individual interpretations.","الأخلاق لها مصدر داخلي: القيم والمعتقدات والتفسيرات الفردية.",1,"صح."),
+      T("Law and ethics have the same source and enforcement.","القانون والأخلاق لهما نفس المصدر والإنفاذ.",0,"خطأ: يختلفان.")
+    ]
+  },
+  {
+    name: "احترام الأشخاص والاستقلالية",
+    nameEn: "Respect for Persons & Autonomy",
+    questions: [
+      M("Which principle directs individuals to treat themselves and others with respect inherent to man's humanness?","أي مبدأ يوجه الأفراد لمعاملة أنفسهم والآخرين باحترام متأصل في إنسانية الإنسان؟",["Respect for persons|احترام الأشخاص","Veracity|الصدق","Fidelity|الوفاء","Justice|العدالة"],0,"احترام الأشخاص."),
+      M("Respect for persons requires recognition that all mankind shares a:","يتطلب احترام الأشخاص الاعتراف بأن البشرية جمعاء تشترك في:",["Common language|لغة مشتركة","Common human destiny|مصير إنساني مشترك","Common profession|مهنة مشتركة","Common income|دخل مشترك"],1,"مصير إنساني مشترك."),
+      M("A nurse's respect for persons generally means respect for:","احترام الممرضة للأشخاص يعني عموماً احترام:",["Autonomy|الاستقلالية","Law|القانون","Competence|الكفاءة","Fidelity|الوفاء"],0,"الاستقلالية."),
+      M("Autonomy involves the right of:","تتضمن الاستقلالية حق:",["Physicians only|الأطباء فقط","Nurses to decide for patients|الممرضات في اتخاذ القرار للمرضى","Self-determination or choice, independence and freedom|تقرير المصير أو الاختيار والاستقلال والحرية","Hospitals|المستشفيات"],2,"تقرير المصير والاختيار والاستقلال والحرية."),
+      M("When clients cannot speak for themselves in emergencies, there is:","عندما لا يستطيع العملاء التحدث عن أنفسهم في حالات الطوارئ، هناك:",["Refusal|رفض","No treatment|لا علاج","Delay|تأخير","Presumed consent|موافقة مفترضة"],3,"موافقة مفترضة."),
+      M("Which is a reason for presumed consent?","أي مما يلي سبب للموافقة المفترضة؟",["Nurses prefer to act alone|الممرضات يفضلن العمل بمفردهن","Hospitals require it for profit|المستشفيات تتطلبها للربح","It is reasonable to assume injured/ill clients would want treatment|من المعقول افتراض أن العملاء المصابين/المرضى سيرغبون في العلاج","Clients always refuse|العملاء يرفضون دائماً"],2,"من المعقول افتراض رغبتهم بالعلاج."),
+      M("The social contract based on social trust requires that clients be:","العقد الاجتماعي القائم على الثقة الاجتماعية يتطلب أن يكون العملاء:",["Discharged|مفروغاً منهم","Treated and not abandoned if they cannot speak for themselves|معالجين ولا يتم التخلي عنهم إذا لم يتمكنوا من التحدث عن أنفسهم","Transferred|منقولين","Left alone|متروكين وحدهم"],1,"يُعالجون ولا يُتخلى عنهم."),
+      M("Which is a nursing obligation related to autonomy?","أي مما يلي هو التزام تمريضي متعلق بالاستقلالية؟",["Override competent decisions|تجاوز القرارات الكفؤة","Ignore advance directives|تجاهل التوجيهات المسبقة","Make all decisions for clients|اتخاذ جميع القرارات للعملاء","Assist and promote client decision making|مساعدة وتعزيز اتخاذ القرار من قبل العميل"],3,"مساعدة وتعزيز اتخاذ القرار."),
+      M("Nurses should support clients' rights to:","يجب على الممرضات دعم حقوق العملاء في:",["Informed consent|الموافقة المستنيرة","Hidden treatment|العلاج الخفي","Forced treatment|العلاج القسري","Anonymous billing|الفواتير المجهولة"],0,"الموافقة المستنيرة."),
+      M("Nurses should follow the ______ that clients provide.","يجب على الممرضات اتباع ______ التي يقدمها العملاء.",["Bills|الفواتير","Hospital menus|قوائم المستشفى","Shift schedules|جداول المناوبات","Advance directives|التوجيهات المسبقة"],3,"التوجيهات المسبقة."),
+      M("Nurses should support the decisions of:","يجب على الممرضات دعم قرارات:",["Competent clients|العملاء الأكفاء","Nobody|لا أحد","Only physicians|الأطباء فقط","Only family|العائلة فقط"],0,"قرارات العميل الكفء."),
+      T("A nurse's respect for persons generally means respect for autonomy.","احترام الممرضة للأشخاص يعني عموماً احترام الاستقلالية.",1,"صح."),
+      T("Nurses should override the decisions of competent clients when they disagree.","يجب على الممرضات تجاوز قرارات العملاء الأكفاء عندما يختلفن معهن.",0,"خطأ: يدعمن قرارات العملاء الأكفاء."),
+      T("Autonomy involves self-determination, independence and freedom.","تتضمن الاستقلالية تقرير المصير والاستقلال والحرية.",1,"صح."),
+      T("Respect for autonomy applies fully when a client is unconscious.","ينطبق احترام الاستقلالية بشكل كامل عندما يكون العميل فاقداً للوعي.",0,"خطأ: لا ينطبق (يُستخدم Presumed Consent)."),
+      T("Nurses should support competent clients' decisions.","يجب على الممرضات دعم قرارات العملاء الأكفاء.",1,"صح."),
+      T("Presumed consent applies when a competent client refuses treatment.","تُطبق الموافقة المفترضة عندما يرفض العميل الكفء العلاج.",0,"خطأ: يُطبق عندما لا يستطيع العميل التعبير في الطوارئ."),
+      T("In emergencies, presumed consent is based on the assumption that injured clients would want treatment.","في حالات الطوارئ، تستند الموافقة المفترضة إلى افتراض أن العملاء المصابين سيرغبون في العلاج.",1,"صح."),
+      T("Nurses should ignore advance directives provided by clients.","يجب على الممرضات تجاهل التوجيهات المسبقة التي يقدمها العملاء.",0,"خطأ: يجب اتباعها."),
+      T("Autonomy means the nurse makes decisions on behalf of competent clients.","الاستقلالية تعني أن الممرضة تتخذ قرارات نيابة عن العملاء الأكفاء.",0,"خطأ: الاستقلالية حق الاختيار الذاتي للعميل."),
+      T("Health care providers have a social contract based on social trust.","مقدمو الرعاية الصحية لديهم عقد اجتماعي قائم على الثقة الاجتماعية.",1,"صح."),
+      T("Respect for persons requires recognizing that all mankind shares a common human destiny.","يتطلب احترام الأشخاص الاعتراف بأن البشرية جمعاء تشترك في مصير إنساني مشترك.",1,"صح."),
+      M("A nurse supports a competent patient's decision even though the nurse personally disagrees with it. Which ethical principle is demonstrated?","تدعم الممرضة قرار مريض كفء رغم أنها لا توافق عليه شخصياً. أي مبدأ أخلاقي يتم إظهاره؟",["Beneficence|الإحسان","Justice|العدالة","Autonomy|الاستقلالية","Fidelity|الوفاء"],2,"الاستقلالية: احترام حق المريض في تقرير المصير.",1),
+      T("Autonomy means that nurses should make all important healthcare decisions on behalf of their patients.","تعني الاستقلالية أن على الممرضات اتخاذ جميع قرارات الرعاية الصحية المهمة نيابة عن مرضاهم.",0,"خطأ: الاستقلالية تعني احترام قرارات المريض الكفء وليس اتخاذها نيابة عنه.",1),
+      T("Respecting patient autonomy means allowing patients to participate in decisions about their healthcare.","احترام استقلالية المريض يعني السماح للمرضى بالمشاركة في القرارات المتعلقة برعايتهم الصحية.",1,"صح: الاستقلالية تشمل المشاركة في القرارات.",1),
+      T("Nurses should always control patients' decisions, even when patients are competent to make their own decisions.","يجب على الممرضات دائماً التحكم في قرارات المرضى، حتى عندما يكون المرضى أكفاء لاتخاذ قراراتهم بأنفسهم.",0,"خطأ: يجب دعم قرارات المرضى الأكفاء.",1)
+    ]
+  },
+  {
+    name: "عدم الإضرار والإحسان والعدالة",
+    nameEn: "Non-maleficence, Beneficence & Justice",
+    questions: [
+      M("Beneficence and non-maleficence are viewed as a:","يُنظر إلى الإحسان وعدم الإضرار على أنهما:",["Policy|سياسة","Contract|عقد","Continuum|سلسلة متصلة","Law|قانون"],2,"سلسلة متصلة."),
+      M("The continuum ranges from not inflicting harm to:","تمتد السلسلة من عدم إيقاع الضرر إلى:",["Punishing others|معاقبة الآخرين","Benefiting others|إفادة الآخرين","Ignoring others|تجاهل الآخرين","Avoiding patients|تجنب المرضى"],1,"إفادة الآخرين."),
+      M("Non infliction of harm is:","عدم إيقاع الضرر هو:",["Fidelity|الوفاء","Beneficence|الإحسان","Non-maleficence|عدم الإضرار","Justice|العدالة"],2,"عدم الإضرار."),
+      M("Removing a harmful condition is:","إزالة حالة ضارة هو:",["Beneficence|الإحسان","Veracity|الصدق","Non-maleficence|عدم الإضرار","Autonomy|الاستقلالية"],0,"إحسان."),
+      M("Preventing harm is:","منع الضرر هو:",["Fidelity|الوفاء","Beneficence|الإحسان","Confidentiality|السرية","Non-maleficence|عدم الإضرار"],1,"إحسان."),
+      M("Doing good or benefiting others is:","فعل الخير أو إفادة الآخرين هو:",["Justice|العدالة","Veracity|الصدق","Non-maleficence|عدم الإضرار","Beneficence|الإحسان"],3,"إحسان."),
+      M("Generally, which takes precedence?","عموماً، أيهما له الأسبقية؟",["Both are equal|كلاهما متساويان","Neither|لا شيء منهما","Non-maleficence over beneficence|عدم الإضرار على الإحسان","Beneficence over non-maleficence|الإحسان على عدم الإضرار"],2,"لعدم الإضرار الأسبقية."),
+      M("In the clinical situation it is often difficult to:","في الموقف السريري غالباً ما يكون من الصعب:",["Count staff|عد الموظفين","Draw the line between not inflicting harm and preventing/removing harmful situations|رسم الخط الفاصل بين عدم إيقاع الضرر ومنع/إزالة المواقف الضارة","Find patients|العثور على المرضى","Write reports|كتابة التقارير"],1,"صعب رسم الخط الفاصل."),
+      M("The nurse who immunizes children inflicts some harm or pain, but:","الممرضة التي تحصّن الأطفال تسبب بعض الأذى أو الألم، لكن:",["The benefit of protection is more important|فائدة الحماية أكثر أهمية","It is optional|هو اختياري","It is unethical|غير أخلاقي","The harm is more important|الضرر أكثر أهمية"],0,"فائدة الحماية أهم."),
+      M("Beneficence requires:","يتطلب الإحسان:",["Maximizing profit|تعظيم الربح","Ignoring risks|تجاهل المخاطر","Avoiding all risks|تجنب جميع المخاطر","Balancing harm and benefits|الموازنة بين الضرر والفوائد"],3,"موازنة الضرر والفوائد."),
+      M("Who must consider risks and benefits in treatment and research decisions?","من يجب أن ينظر في المخاطر والفوائد في قرارات العلاج والبحث؟",["Only hospital managers|مديرو المستشفى فقط","Only nurses|الممرضات فقط","Clients, nurses and physicians|العملاء والممرضات والأطباء","Only physicians|الأطباء فقط"],2,"العملاء والممرضون والأطباء."),
+      M("Justice refers to:","تشير العدالة إلى:",["Telling the truth|قول الحقيقة","Fairness or equity|الإنصاف أو المساواة","Privacy|الخصوصية","Keeping promises|الوفاء بالوعود"],1,"الإنصاف."),
+      M("Which problem complicates distributive justice?","أي مشكلة تعقد العدالة التوزيعية؟",["Everyone is identical|الجميع متطابقون","No clients|لا يوجد عملاء","Resources are unlimited|الموارد غير محدودة","Resources are limited|الموارد محدودة"],3,"الموارد محدودة."),
+      M("The distribution of care is determined by:","يتم تحديد توزيع الرعاية من خلال:",["Individual needs of the client and nurses' priorities|الاحتياجات الفردية للعميل وأولويات الممرضات","Wealth of the client|ثروة العميل","Random choice|اختيار عشوائي","Age only|العمر فقط"],0,"الاحتياجات الفردية وأولويات الممرض."),
+      M("Giving each person an equal share is complicated because:","إعطاء كل شخص نصيباً متساوياً معقد لأن:",["Care is free|الرعاية مجانية","Not everyone is equal in every way|ليس الجميع متساوين في كل شيء","Nurses disagree|الممرضات يختلفن","Everyone is identical|الجميع متطابقون"],1,"ليس الجميع متساوين في كل شيء."),
+      T("Resources are always enough for all, so distribution is not a problem.","الموارد دائماً كافية للجميع، لذا التوزيع ليس مشكلة.",0,"خطأ: الموارد محدودة."),
+      T("The beneficence principle requires balancing harm and benefits.","يتطلب مبدأ الإحسان موازنة الضرر والفوائد.",1,"صح."),
+      T("Immunization is unethical because it inflicts some pain.","التحصين غير أخلاقي لأنه يسبب بعض الألم.",0,"خطأ: فائدة الحماية أهم."),
+      T("Beneficence generally takes precedence over non-maleficence.","الإحسان عموماً له الأسبقية على عدم الإضرار.",0,"خطأ: العكس."),
+      T("Non infliction of harm is non-maleficence.","عدم إيقاع الضرر هو عدم الإضرار.",1,"صح."),
+      T("Beneficence means non-infliction of harm.","الإحسان يعني عدم إيقاع الضرر.",0,"خطأ: هذا عدم الإضرار."),
+      T("Distribution of care is determined by individual needs of the client.","يتم تحديد توزيع الرعاية من خلال الاحتياجات الفردية للعميل.",1,"صح."),
+      T("Removing a harmful condition and preventing harm are beneficence.","إزالة حالة ضارة ومنع الضرر هما إحسان.",1,"صح."),
+      T("Justice means giving every client exactly the same care regardless of needs.","تعني العدالة إعطاء كل عميل نفس الرعاية بالضبط بغض النظر عن الاحتياجات.",0,"خطأ: توزيع الرعاية حسب احتياجات كل عميل."),
+      T("Immunization may inflict some pain but the benefit of protection is more important.","قد يسبب التحصين بعض الألم لكن فائدة الحماية أكثر أهمية.",1,"صح."),
+      T("Justice refers to fairness or equity.","تشير العدالة إلى الإنصاف أو المساواة.",1,"صح."),
+      T("Non-maleficence means doing good or benefiting others.","عدم الإضرار يعني فعل الخير أو إفادة الآخرين.",0,"خطأ: هذا الإحسان."),
+      T("Beneficence and non-maleficence are viewed as a continuum.","يُنظر إلى الإحسان وعدم الإضرار على أنهما سلسلة متصلة.",1,"صح."),
+      M("A nurse takes action to prevent a patient from being injured. Which principle is primarily demonstrated?","تتخذ الممرضة إجراءً لمنع إصابة المريض. أي مبدأ يتم إظهاره بشكل أساسي؟",["Veracity|الصدق","Beneficence|الإحسان","Confidentiality|السرية","Accountability|المحاسبة"],1,"الإحسان: منع الضرر هو إحسان.",1),
+      M("Which ethical principle means fairness or equity in the distribution of healthcare?","أي مبدأ أخلاقي يعني الإنصاف أو المساواة في توزيع الرعاية الصحية؟",["Justice|العدالة","Fidelity|الوفاء","Autonomy|الاستقلالية","Veracity|الصدق"],0,"العدالة: الإنصاف في توزيع الرعاية.",1),
+      M("Which ethical principle emphasizes avoiding harm to the patient?","أي مبدأ أخلاقي يؤكد على تجنب إيذاء المريض؟",["Veracity|الصدق","Autonomy|الاستقلالية","Non-maleficence|عدم الإضرار","Justice|العدالة"],2,"عدم الإضرار: تجنب إيذاء المريض.",1),
+      T("Non-maleficence means avoiding or not inflicting harm.","عدم الإضرار يعني تجنب أو عدم إيقاع الضرر.",1,"صح.",1),
+      T("Beneficence and non-maleficence are completely unrelated ethical principles.","الإحسان وعدم الإضرار مبدآن أخلاقيان غير مرتبطين تماماً.",0,"خطأ: هما سلسلة متصلة.",1),
+      T("Justice always means that every patient must receive exactly the same amount of healthcare resources.","تعني العدالة دائماً أن كل مريض يجب أن يحصل على نفس الكمية بالضبط من موارد الرعاية الصحية.",0,"خطأ: العدالة تعني الإنصاف، وتوزيع الرعاية حسب الاحتياجات.",1)
+    ]
+  },
+  {
+    name: "الوفاء والصدق والسرية",
+    nameEn: "Fidelity, Veracity & Confidentiality",
+    questions: [
+      M("Keeping promises made to clients, families and other professionals is:","الوفاء بالوعود المقدمة للعملاء والعائلات والمهنيين الآخرين هو:",["Confidentiality|السرية","Veracity|الصدق","Fidelity|الوفاء","Justice|العدالة"],2,"الوفاء."),
+      M("Telling the truth or not intentionally deceiving patients is:","قول الحقيقة أو عدم خداع المرضى عمداً هو:",["Veracity|الصدق","Fidelity|الوفاء","Confidentiality|السرية","Autonomy|الاستقلالية"],0,"الصدق."),
+      M("A basic ethical principle that ensures a client's privacy is:","مبدأ أخلاقي أساسي يضمن خصوصية العميل هو:",["Veracity|الصدق","Fidelity|الوفاء","Beneficence|الإحسان","Confidentiality|السرية"],3,"السرية."),
+      M("Deceiving or misleading patients intentionally violates:","خداع أو تضليل المرضى عمداً ينتهك:",["Fidelity|الوفاء","Justice|العدالة","Veracity|الصدق","Autonomy|الاستقلالية"],2,"الصدق."),
+      M("Breaking a promise to a patient violates:","نقض الوعد للمريض ينتهك:",["Fidelity|الوفاء","Confidentiality|السرية","Justice|العدالة","Veracity|الصدق"],0,"الوفاء."),
+      M("Sharing a patient's information without permission violates:","مشاركة معلومات المريض دون إذن تنتهك:",["Fidelity|الوفاء","Confidentiality|السرية","Justice|العدالة","Beneficence|الإحسان"],1,"السرية."),
+      T("Veracity refers to telling the truth.","الصدق يشير إلى قول الحقيقة.",1,"صح."),
+      T("Veracity allows intentionally misleading patients.","الصدق يسمح بتضليل المرضى عمداً.",0,"خطأ: لا خداع عمدي."),
+      T("Sharing a patient's information without permission violates fidelity.","مشاركة معلومات المريض دون إذن ينتهك الوفاء.",0,"خطأ: تنتهك السرية."),
+      T("Fidelity concerns promises made to clients, families and other professionals.","الوفاء يتعلق بالوعود المقدمة للعملاء والعائلات والمهنيين الآخرين.",1,"صح."),
+      T("Veracity means keeping a client's information private.","الصدق يعني الحفاظ على خصوصية معلومات العميل.",0,"خطأ: هذه السرية، والصدق هو قول الحقيقة."),
+      T("Confidentiality means keeping promises to clients.","السرية تعني الوفاء بالوعود للعملاء.",0,"خطأ: هذا الوفاء."),
+      T("Confidentiality ensures a client's privacy.","السرية تضمن خصوصية العميل.",1,"صح."),
+      T("Fidelity refers to keeping promises.","الوفاء يشير إلى الوفاء بالوعود.",1,"صح."),
+      M("A nurse keeps a promise made to a patient's family regarding the patient's care. This demonstrates:","تحافظ الممرضة على وعد قطعته لعائلة المريض بخصوص رعاية المريض. هذا يوضح:",["Competence|الكفاءة","Fidelity|الوفاء","Non-maleficence|عدم الإضرار","Judgment|الحكم"],1,"الوفاء: الحفاظ على الوعود.",1),
+      M("Which principle requires nurses to tell the truth and avoid intentionally misleading patients?","أي مبدأ يتطلب من الممرضات قول الحقيقة وتجنب تضليل المرضى عمداً؟",["Veracity|الصدق","Justice|العدالة","Autonomy|الاستقلالية","Responsibility|المسؤولية"],0,"الصدق: قول الحقيقة وتجنب الخداع.",1),
+      M("A nurse avoids discussing a patient's diagnosis with unauthorized people. Which principle is being applied?","تتجنب الممرضة مناقشة تشخيص المريض مع أشخاص غير مصرح لهم. أي مبدأ يتم تطبيقه؟",["Beneficence|الإحسان","Confidentiality|السرية","Fidelity|الوفاء","Accountability|المحاسبة"],1,"السرية: حماية خصوصية معلومات المريض.",1),
+      M("Which ethical principle refers to telling the patient the truth?","أي مبدأ أخلاقي يشير إلى إخبار المريض بالحقيقة؟",["Autonomy|الاستقلالية","Veracity|الصدق","Non-maleficence|عدم الإضرار","Justice|العدالة"],1,"الصدق: قول الحقيقة للمريض.",1),
+      T("Fidelity involves keeping promises made to clients, families, and other professionals.","يتضمن الوفاء الحفاظ على الوعود المقطوعة للعملاء والعائلات والمهنيين الآخرين.",1,"صح.",1),
+      T("Confidentiality is an ethical principle that protects the patient's privacy.","السرية مبدأ أخلاقي يحمي خصوصية المريض.",1,"صح.",1)
+    ]
+  },
+  {
+    name: "المسؤولية والمحاسبة",
+    nameEn: "Responsibility & Accountability",
+    questions: [
+      M("The execution of duties associated with the nurse's particular role is:","تنفيذ الواجبات المرتبطة بدور الممرضة المحدد هو:",["Accountability|المحاسبة","Judgment|الحكم","Competence|الكفاءة","Responsibility|المسؤولية"],3,"المسؤولية."),
+      M("Being answerable for one's own actions is:","كون المرء مسؤولاً عن أفعاله هو:",["Fidelity|الوفاء","Accountability|المحاسبة","Veracity|الصدق","Responsibility|المسؤولية"],1,"المحاسبة."),
+      M("A nurse is accountable to:","الممرضة مسؤولة أمام:",["Only the hospital|المستشفى فقط","Only the physician|الطبيب فقط","Self|نفسها","Nobody|لا أحد"],2,"نفسها (وغيرها)."),
+      M("Which is a purpose of professional accountability?","أي مما يلي هو غرض المحاسبة المهنية؟",["Facilitate personal reflection, ethical thought and growth|تسهيل التأمل الشخصي والتفكير الأخلاقي والنمو","Avoid evaluation|تجنب التقييم","Hide errors|إخفاء الأخطاء","Limit education|الحد من التعليم"],0,"تسهيل التأمل والتفكير الأخلاقي والنمو."),
+      M("To be accountable the nurse practices within the:","لكي تكون مسؤولة، تمارس الممرضة ضمن:",["Manager's wishes only|رغبات المدير فقط","Hospital policy only|سياسة المستشفى فقط","Patient's wishes only|رغبات المريض فقط","Code of the profession|مدونة المهنة"],3,"مدونة المهنة."),
+      M("Accountability requires:","تتطلب المحاسبة:",["No evaluation|لا تقييم","Only patient feedback|ملاحظات المريض فقط","Evaluation of the nurse's performance|تقييم أداء الممرضة","Only self-report|التقرير الذاتي فقط"],2,"تقييم الأداء."),
+      M("Maintaining the standard of health care is a purpose of:","الحفاظ على مستوى الرعاية الصحية هو غرض من أغراض:",["Veracity|الصدق","Professional accountability|المحاسبة المهنية","Fidelity|الوفاء","Confidentiality|السرية"],1,"المحاسبة المهنية."),
+      T("Professional accountability helps maintain standards of health care.","تساعد المحاسبة المهنية في الحفاظ على معايير الرعاية الصحية.",1,"صح."),
+      T("To be accountable, the nurse practices within the code of the profession.","لكي تكون مسؤولة، تمارس الممرضة ضمن مدونة المهنة.",1,"صح."),
+      T("Professional accountability discourages evaluating new professional practices.","المحاسبة المهنية تثبط تقييم الممارسات المهنية الجديدة.",0,"خطأ: من أغراضها تقييم الممارسات الجديدة."),
+      T("Responsibility and accountability mean exactly the same thing in the lecture.","المسؤولية والمحاسبة تعنيان نفس الشيء بالضبط في المحاضرة.",0,"خطأ: تنفيذ الواجبات مقابل المساءلة عن الأفعال."),
+      T("Responsibility refers to execution of duties associated with the nurse's role.","تشير المسؤولية إلى تنفيذ الواجبات المرتبطة بدور الممرضة.",1,"صح."),
+      T("Accountability means the execution of duties associated with the nurse's role.","المحاسبة تعني تنفيذ الواجبات المرتبطة بدور الممرضة.",0,"خطأ: هذه المسؤولية."),
+      T("Accountability does not require evaluation of the nurse's performance.","المحاسبة لا تتطلب تقييم أداء الممرضة.",0,"خطأ: تتطلب."),
+      T("Accountability means being answerable for one's own actions.","المحاسبة تعني أن تكون مسؤولاً عن أفعالك.",1,"صح."),
+      T("A nurse is accountable only to the employer.","الممرضة مسؤولة أمام صاحب العمل فقط.",0,"خطأ: مساءلة أمام النفس والعميل والمهنة والمجتمع."),
+      M("What does professional accountability mean?","ماذا تعني المحاسبة المهنية؟",["Performing only tasks assigned by other nurses|أداء المهام الموكلة من ممرضات أخريات فقط","Being answerable for one's own actions|أن تكون مسؤولاً عن أفعالك","Avoiding difficult clinical decisions|تجنب القرارات السريرية الصعبة","Following the patient's wishes in every situation|اتباع رغبات المريض في كل موقف"],1,"المحاسبة: أن تكون مسؤولاً عن أفعالك.",1),
+      T("Responsibility refers to being answerable for one's own actions.","تشير المسؤولية إلى أن تكون مسؤولاً عن أفعالك.",0,"خطأ: المساءلة عن الأفعال هي المحاسبة. المسؤولية هي تنفيذ الواجبات.",1)
+    ]
+  },
+  {
+    name: "الكفاءة والحكم",
+    nameEn: "Competence & Judgment",
+    questions: [
+      M("A state of having knowledge, judgment, skills, energy, experience and motivation required to respond adequately to professional demands is:","حالة امتلاك المعرفة والحكم والمهارات والطاقة والخبرة والدافع المطلوبة للاستجابة بشكل كافٍ للمتطلبات المهنية هي:",["Competence|الكفاءة","Accountability|المحاسبة","Judgment|الحكم","Fidelity|الوفاء"],0,"الكفاءة."),
+      M("The ability to form an opinion or draw sound conclusions is:","القدرة على تكوين رأي أو استخلاص استنتاجات سليمة هي:",["Veracity|الصدق","Responsibility|المسؤولية","Competence|الكفاءة","Judgment|الحكم"],3,"الحكم."),
+      M("Competence includes which of these?","تشمل الكفاءة أي مما يلي؟",["Energy and motivation|الطاقة والدافع","Only age|العمر فقط","Only a degree|شهادة فقط","Only seniority|الأقدمية فقط"],0,"الطاقة والدافع."),
+      M("Judgment refers to:","يشير الحكم إلى:",["Keeping promises|الوفاء بالوعود","Telling truth|قول الحقيقة","Keeping privacy|الحفاظ على الخصوصية","Drawing sound conclusions|استخلاص استنتاجات سليمة"],3,"استخلاص استنتاجات سليمة."),
+      T("Competence requires only a degree.","تتطلب الكفاءة شهادة فقط.",0,"خطأ: عدة عناصر."),
+      T("Judgment is the ability to form an opinion or draw sound conclusions.","الحكم هو القدرة على تكوين رأي أو استخلاص استنتاجات سليمة.",1,"صح."),
+      T("Judgment is the state of having knowledge, skills, energy and motivation required to perform duties.","الحكم هو حالة امتلاك المعرفة والمهارات والطاقة والدافع المطلوبة لأداء الواجبات.",0,"خطأ: هذه الكفاءة."),
+      T("Competence includes knowledge, judgment, skills, energy, experience and motivation.","تشمل الكفاءة المعرفة والحكم والمهارات والطاقة والخبرة والدافع.",1,"صح."),
+      T("Competence does not include experience.","الكفاءة لا تشمل الخبرة.",0,"خطأ: تشمل الخبرة."),
+      M("The ability to form an opinion or draw sound conclusions is known as:","القدرة على تكوين رأي أو استخلاص استنتاجات سليمة تُعرف بـ:",["Responsibility|المسؤولية","Competence|الكفاءة","Judgment|الحكم","Fidelity|الوفاء"],2,"الحكم: القدرة على تكوين رأي واستخلاص استنتاجات سليمة.",1),
+      T("Competence refers to the range of skills necessary to perform a particular task.","تشير الكفاءة إلى مجموعة المهارات اللازمة لأداء مهمة معينة.",1,"صح: الكفاءة تشمل المهارات اللازمة.",1)
+    ]
+  },
+  {
+    name: "مدونة الأخلاقيات: تعريف ومقدمة",
+    nameEn: "Code of Ethics: Definition & Introduction",
+    questions: [
+      M("A code of ethics makes explicit the profession's:","مدونة الأخلاقيات توضح صراحة:",["Salary scale|سلم الرواتب","Building codes|قوانين البناء","Primary goals, values and obligations|الأهداف والقيم والالتزامات الأساسية للمهنة","Drug list|قائمة الأدوية"],2,"الأهداف والقيم والالتزامات الأساسية."),
+      M("Ethics is an integral part of the:","الأخلاقيات جزء لا يتجزأ من:",["Laboratory|المختبر","Foundation of nursing|أساس التمريض","Pharmacy|الصيدلية","Hospital budget|ميزانية المستشفى"],1,"أساس التمريض."),
+      M("Nursing's history shows concern for the sick, injured and:","يُظهر تاريخ التمريض الاهتمام بالمرضى والمصابين و:",["Retired|المتقاعدين","Wealthy|الأثرياء","Vulnerable|الضعفاء","Employed|الموظفين"],2,"الضعفاء."),
+      T("Ethics is separate from the foundation of nursing.","الأخلاقيات منفصلة عن أساس التمريض.",0,"خطأ: هي جزء لا يتجزأ من أساس التمريض."),
+      T("A code of ethics makes explicit the goals, values and obligations of the profession.","مدونة الأخلاقيات توضح صراحة الأهداف والقيم والالتزامات الأساسية للمهنة.",1,"صح."),
+      T("Nursing concern is limited to individuals and not the community.","اهتمام التمريض يقتصر على الأفراد وليس المجتمع.",0,"خطأ: الأفراد والمجتمع."),
+      T("Ethics is an integral part of the foundation of nursing.","الأخلاقيات جزء لا يتجزأ من أساس التمريض.",1,"صح."),
+      T("Nursing's concern is limited to the sick and does not include the vulnerable.","اهتمام التمريض يقتصر على المرضى ولا يشمل الضعفاء.",0,"خطأ: تشمل المرضى والمصابين والضعفاء.")
+    ]
+  },
+  {
+    name: "أغراض مدونة الأخلاقيات",
+    nameEn: "Purposes of Code of Ethics",
+    questions: [
+      M("The code of ethics is a succinct statement of:","مدونة الأخلاقيات هي بيان موجز لـ:",["Hospital rules|قواعد المستشفى","Payment rates|معدلات الدفع","Clinical procedures|الإجراءات السريرية","Ethical obligations and duties of every individual entering nursing|الالتزامات والواجبات الأخلاقية لكل فرد يدخل مجال التمريض"],3,"الالتزامات والواجبات الأخلاقية."),
+      M("The code is the profession's:","المدونة هي:",["Nonnegotiable ethical standard|المعيار الأخلاقي غير القابل للتفاوض","Draft|مسودة","Local policy|سياسة محلية","Optional guideline|إرشاد اختياري"],0,"المعيار الأخلاقي غير القابل للتفاوض."),
+      M("The code expresses nursing's understanding of its:","تعبر المدونة عن فهم التمريض لـ:",["Salary needs|احتياجات الراتب","Commitment to society|الالتزام تجاه المجتمع","Marketing goals|أهداف التسويق","Tax duties|الواجبات الضريبية"],1,"الالتزام تجاه المجتمع."),
+      T("The code is the profession's negotiable ethical standard.","المدونة هي المعيار الأخلاقي القابل للتفاوض للمهنة.",0,"خطأ: غير قابل للتفاوض."),
+      T("The code is a succinct statement of ethical obligations of every nurse entering the profession.","المدونة هي بيان موجز للالتزامات الأخلاقية لكل ممرض يدخل المهنة.",1,"صح."),
+      T("The code of ethics applies only to experienced nurses.","مدونة الأخلاقيات تنطبق فقط على الممرضات ذوات الخبرة.",0,"خطأ: لكل ممرض يدخل المهنة."),
+      T("The code expresses nursing's commitment to the employer.","تعبر المدونة عن التزام التمريض تجاه صاحب العمل.",0,"خطأ: الالتزام تجاه المجتمع."),
+      T("The code expresses nursing's commitment to society.","تعبر المدونة عن التزام التمريض تجاه المجتمع.",1,"صح.")
+    ]
+  },
+  {
+    name: "أحكام ANA 1-3",
+    nameEn: "ANA Provisions 1-3",
+    questions: [
+      M("Provision 1 is about:","الحكم الأول يدور حول:",["Accountability|المحاسبة","Collaboration|التعاون","Social justice|العدالة الاجتماعية","Respect|الاحترام"],3,"الاحترام."),
+      M("Provision 1: the nurse practices with compassion and respect for the inherent dignity, worth and unique attributes of:","الحكم الأول: تمارس الممرضة عملها برحمة واحترام للكرامة والقيمة والسمات الفريدة المتأصلة في:",["Only families|العائلات فقط","Only colleagues|الزملاء فقط","Every person|كل شخص","Only patients|المرضى فقط"],2,"كل شخص."),
+      M("Practical focus of Provision 1 includes:","يشمل التركيز العملي للحكم الأول:",["Safe staffing|التوظيف الآمن","Compassion, dignity, unbiased care, respectful communication|الرحمة والكرامة والرعاية غير المتحيزة والتواصل المحترم","Policy development|تطوير السياسات","Research integrity|نزاهة البحث"],1,"الرحمة والكرامة والرعاية بلا تحيز."),
+      M("Provision 2 is about:","الحكم الثاني يدور حول:",["Patient commitment|الالتزام تجاه المريض","Rights and safety|الحقوق والسلامة","Duties to self|الواجبات تجاه الذات","Respect|الاحترام"],0,"الالتزام تجاه المريض."),
+      M("The nurse's primary commitment is to the:","التزام الممرضة الأساسي هو تجاه:",["Physician|الطبيب","Patient (individual, family, group, community or population)|المريض (فرد، أسرة، مجموعة، مجتمع أو سكان)","Government|الحكومة","Employer|صاحب العمل"],1,"المريض."),
+      M("Practical focus of Provision 2 includes:","يشمل التركيز العملي للحكم الثاني:",["Self-care|الرعاية الذاتية","Bullying|التنمر","Research|البحث","Advocacy, informed choices, care coordination, confidentiality, avoiding conflicts of interest|المناصرة والخيارات المستنيرة والتنسيق والسرية وتجنب تضارب المصالح"],3,"الدفاع والخيارات المستنيرة والتنسيق والسرية."),
+      M("Provision 3 is about:","الحكم الثالث يدور حول:",["Respect|الاحترام","Collaboration|التعاون","Rights and safety|الحقوق والسلامة","Accountability|المحاسبة"],2,"الحقوق والسلامة."),
+      M("Provision 3: the nurse promotes, advocates for and protects the:","الحكم الثالث: تعزز الممرضة وتدافع وتحمي:",["Rights, health and safety of the patient|حقوق وصحة وسلامة المريض","Physician decisions|قرارات الطبيب","Nurse's income|دخل الممرضة","Hospital profits|أرباح المستشفى"],0,"حقوق وصحة وسلامة المريض."),
+      M("Practical focus of Provision 3 includes:","يشمل التركيز العملي للحكم الثالث:",["Lifelong learning|التعلم مدى الحياة","Teamwork only|العمل الجماعي فقط","Policy|السياسة","Privacy, informed consent, patient safety, reporting errors|الخصوصية والموافقة المستنيرة وسلامة المريض والإبلاغ عن الأخطاء"],3,"الخصوصية والموافقة والسلامة والإبلاغ عن الأخطاء."),
+      M("Reporting errors is a focus of Provision:","الإبلاغ عن الأخطاء هو محور الحكم:",["1|1","3|3","7|7","5|5"],1,"الحكم الثالث."),
+      M("Avoiding conflicts of interest is a focus of Provision:","تجنب تضارب المصالح هو محور الحكم:",["2|2","1|1","6|6","3|3"],0,"الحكم الثاني."),
+      M("Unbiased care is a focus of Provision:","الرعاية غير المتحيزة هي محور الحكم:",["4|4","2|2","1|1","9|9"],2,"الحكم الأول."),
+      M("Informed consent is a focus of Provision:","الموافقة المستنيرة هي محور الحكم:",["8|8","3|3","1|1","5|5"],1,"الحكم الثالث."),
+      T("Provision 1 concerns respect for the inherent dignity and worth of every person.","يتعلق الحكم الأول باحترام الكرامة والقيمة المتأصلة لكل شخص.",1,"صح."),
+      T("Provision 3 practical focus includes reporting errors.","يشمل التركيز العملي للحكم الثالث الإبلاغ عن الأخطاء.",1,"صح."),
+      T("Provision 3 concerns the nurse's duties to self.","يتعلق الحكم الثالث بواجبات الممرضة تجاه نفسها.",0,"خطأ: الحكم 3 عن حقوق المريض وسلامته."),
+      T("Confidentiality is part of the practical focus of Provision 2.","السرية جزء من التركيز العملي للحكم الثاني.",1,"صح."),
+      T("The patient in Provision 2 may be an individual, family, group, community or population.","المريض في الحكم الثاني قد يكون فرداً أو أسرة أو مجموعة أو مجتمعاً أو سكاناً.",1,"صح."),
+      T("Provision 2 states the nurse's primary commitment is to the employer.","ينص الحكم الثاني على أن التزام الممرضة الأساسي هو تجاه صاحب العمل.",0,"خطأ: للمريض."),
+      T("Safe staffing and documentation are the focus of Provision 1.","التوظيف الآمن والتوثيق هما محور الحكم الأول.",0,"خطأ: الحكم 1 يركز على الاحترام والكرامة."),
+      T("Provision 3 concerns promoting and protecting patient rights, health and safety.","يتعلق الحكم الثالث بتعزيز وحماية حقوق المريض وصحته وسلامته.",1,"صح.")
+    ]
+  },
+  {
+    name: "أحكام ANA 4-6",
+    nameEn: "ANA Provisions 4-6",
+    questions: [
+      M("Provision 4 is about:","الحكم الرابع يدور حول:",["Respect|الاحترام","Ethical work environment|بيئة العمل الأخلاقية","Duties to self|الواجبات تجاه الذات","Accountability|المساءلة"],3,"المساءلة."),
+      M("Provision 4: the nurse has authority, accountability and responsibility for:","الحكم الرابع: للممرضة السلطة والمساءلة والمسؤولية عن:",["Nursing practice|ممارسة التمريض","Hospital finance|تمويل المستشفى","Hiring|التوظيف","Pharmacy|الصيدلية"],0,"ممارسة التمريض."),
+      M("Practical focus of Provision 4 includes:","يشمل التركيز العملي للحكم الرابع:",["Health diplomacy|الدبلوماسية الصحية","Research|البحث","Competent practice, safe delegation, accurate documentation, professional boundaries|الممارسة الكفؤة والتفويض الآمن والتوثيق الدقيق والحدود المهنية","Social justice|العدالة الاجتماعية"],2,"الممارسة الكفؤة والتفويض الآمن والتوثيق."),
+      M("Provision 5 is about:","الحكم الخامس يدور حول:",["Accountability|المساءلة","Collaboration|التعاون","Patient commitment|الالتزام تجاه المريض","Duties to self|الواجبات تجاه الذات"],3,"الواجبات تجاه الذات."),
+      M("Provision 5: the nurse owes the same duties to self as to:","الحكم الخامس: تدين الممرضة بنفس الواجبات تجاه نفسها كما تجاه:",["Government|الحكومة","Employer|صاحب العمل","Others|الآخرين","Physician|الطبيب"],2,"الآخرين."),
+      M("Practical focus of Provision 5 includes:","يشمل التركيز العملي للحكم الخامس:",["Policy development|تطوير السياسات","Self-care, lifelong learning, personal integrity|الرعاية الذاتية والتعلم مدى الحياة والنزاهة الشخصية","Health equity|الإنصاف الصحي","Safe staffing|التوظيف الآمن"],1,"العناية بالذات والتعلم المستمر والنزاهة."),
+      M("Provision 6 is about:","الحكم السادس يدور حول:",["Ethical work environment|بيئة العمل الأخلاقية","Advancing the profession|تطوير المهنة","Accountability|المساءلة","Duties to self|الواجبات تجاه الذات"],0,"بيئة عمل أخلاقية."),
+      M("Provision 6: the nurse establishes, maintains and improves the ethical environment of the:","الحكم السادس: تنشئ الممرضة وتحافظ وتحسن البيئة الأخلاقية لـ:",["School|المدرسة","Work setting|مكان العمل","Home|المنزل","Community only|المجتمع فقط"],1,"مكان العمل."),
+      M("Practical focus of Provision 6 includes:","يشمل التركيز العملي للحكم السادس:",["Research integrity|نزاهة البحث","Delegation|التفويض","Respectful culture, safe staffing, fairness, teamwork, addressing bullying|ثقافة الاحترام والتوظيف الآمن والإنصاف والعمل الجماعي ومعالجة التنمر","Self-care|الرعاية الذاتية"],2,"ثقافة الاحترام والتوظيف الآمن والإنصاف والتنمر."),
+      M("Safe delegation is a focus of Provision:","التفويض الآمن هو محور الحكم:",["4|4","5|5","8|8","6|6"],0,"الحكم الرابع."),
+      M("Addressing bullying is a focus of Provision:","معالجة التنمر هي محور الحكم:",["7|7","5|5","4|4","6|6"],3,"الحكم السادس."),
+      M("Self-care and lifelong learning are a focus of Provision:","الرعاية الذاتية والتعلم مدى الحياة هي محور الحكم:",["6|6","9|9","5|5","4|4"],2,"الحكم الخامس."),
+      M("Accurate documentation is a focus of Provision:","التوثيق الدقيق هو محور الحكم:",["4|4","6|6","5|5","7|7"],0,"الحكم الرابع."),
+      T("Addressing bullying is a practical focus of Provision 6.","معالجة التنمر هي تركيز عملي للحكم السادس.",1,"صح."),
+      T("Addressing bullying is a practical focus of Provision 5.","معالجة التنمر هي تركيز عملي للحكم الخامس.",0,"خطأ: هو من محاور الحكم 6."),
+      T("Provision 5 includes maintaining competence and pursuing professional growth.","يشمل الحكم الخامس الحفاظ على الكفاءة والسعي للنمو المهني.",1,"صح."),
+      T("Provision 5 says the nurse owes duties to others but not to self.","ينص الحكم الخامس على أن الممرضة عليها واجبات تجاه الآخرين وليس تجاه نفسها.",0,"خطأ: نفس الواجبات للنفس."),
+      T("Provision 4 addresses accountability and responsibility for nursing practice.","يتناول الحكم الرابع المساءلة والمسؤولية عن ممارسة التمريض.",1,"صح."),
+      T("Provision 4 is about establishing the ethical work environment.","الحكم الرابع يدور حول إنشاء بيئة العمل الأخلاقية.",0,"خطأ: هذا الحكم 6."),
+      T("Provision 6 concerns establishing and improving the ethical work environment.","يتعلق الحكم السادس بإنشاء وتحسين بيئة العمل الأخلاقية.",1,"صح."),
+      T("Safe delegation and accurate documentation are focus of Provision 4.","التفويض الآمن والتوثيق الدقيق هما محور الحكم الرابع.",1,"صح.")
+    ]
+  },
+  {
+    name: "أحكام ANA 7-9",
+    nameEn: "ANA Provisions 7-9",
+    questions: [
+      M("Provision 7 is about:","الحكم السابع يدور حول:",["Social justice|العدالة الاجتماعية","Advancing the profession|تطوير المهنة","Collaboration|التعاون","Accountability|المساءلة"],1,"تطوير المهنة."),
+      M("Provision 7: the nurse advances the profession through:","الحكم السابع: تطور الممرضة المهنة من خلال:",["Only clinical work|العمل السريري فقط","Only teaching|التدريس فقط","Only management|الإدارة فقط","Research, scholarly inquiry, professional standards development, health policy|البحث والاستقصاء العلمي وتطوير المعايير المهنية والسياسة الصحية"],3,"البحث والاستقصاء العلمي وتطوير المعايير والسياسات."),
+      M("Practical focus of Provision 7 includes:","يشمل التركيز العملي للحكم السابع:",["Bullying|التنمر","Self-care|الرعاية الذاتية","Evidence-based practice, research integrity, education, innovation, policy development|الممارسة المبنية على الأدلة ونزاهة البحث والتعليم والابتكار وتطوير السياسات","Informed consent|الموافقة المستنيرة"],2,"الممارسة المبنية على الأدلة ونزاهة البحث والتعليم والابتكار."),
+      M("Provision 8 is about:","الحكم الثامن يدور حول:",["Social justice|العدالة الاجتماعية","Collaboration|التعاون","Advancing the profession|تطوير المهنة","Respect|الاحترام"],1,"التعاون."),
+      M("Provision 8: the nurse collaborates to protect human rights, promote health diplomacy and:","الحكم الثامن: تتعاون الممرضة لحماية حقوق الإنسان وتعزيز الدبلوماسية الصحية و:",["Reduce health disparities|الحد من التفاوتات الصحية","Reduce teamwork|تقليل العمل الجماعي","Increase costs|زيادة التكاليف","Avoid the public|تجنب الجمهور"],0,"الحد من التفاوتات الصحية."),
+      M("Practical focus of Provision 8 includes:","يشمل التركيز العملي للحكم الثامن:",["Reporting errors|الإبلاغ عن الأخطاء","Self-care|الرعاية الذاتية","Delegation|التفويض","Interprofessional teamwork, community partnerships, health equity|العمل الجماعي بين التخصصات والشراكات المجتمعية والإنصاف الصحي"],3,"العمل بين التخصصات والشراكات المجتمعية والإنصاف الصحي."),
+      M("Provision 9 is about:","الحكم التاسع يدور حول:",["Social justice|العدالة الاجتماعية","Advancing the profession|تطوير المهنة","Duties to self|الواجبات تجاه الذات","Collaboration|التعاون"],0,"العدالة الاجتماعية."),
+      M("Provision 9: the profession, collectively through its organizations, must articulate nursing values, maintain integrity and integrate principles of:","الحكم التاسع: يجب على المهنة، جماعياً من خلال منظماتها، أن توضح قيم التمريض وتحافظ على النزاهة وتدمج مبادئ:",["Finance|التمويل","Marketing|التسويق","Law enforcement|إنفاذ القانون","Social justice into nursing and health policy|العدالة الاجتماعية في التمريض والسياسة الصحية"],3,"العدالة الاجتماعية."),
+      M("Practical focus of Provision 9 includes:","يشمل التركيز العملي للحكم التاسع:",["Delegation|التفويض","Self-care|الرعاية الذاتية","Advocacy for vulnerable groups, equitable access, social justice in policy|المناصرة للفئات الضعيفة والوصول العادل والعدالة الاجتماعية في السياسات","Safe staffing|التوظيف الآمن"],2,"الدفاع عن الفئات الضعيفة والوصول العادل."),
+      M("Health diplomacy is part of Provision:","الدبلوماسية الصحية هي جزء من الحكم:",["9|9","8|8","4|4","7|7"],1,"الحكم الثامن."),
+      M("Research integrity is part of Provision:","نزاهة البحث هي جزء من الحكم:",["8|8","9|9","7|7","6|6"],2,"الحكم السابع."),
+      M("Advocacy for vulnerable groups is part of Provision:","المناصرة للفئات الضعيفة هي جزء من الحكم:",["9|9","7|7","5|5","8|8"],0,"الحكم التاسع."),
+      M("Which provision is expressed collectively through professional organizations?","أي حكم يتم التعبير عنه جماعياً من خلال المنظمات المهنية؟",["3|3","9|9","7|7","5|5"],1,"الحكم التاسع."),
+      T("Evidence-based practice and innovation are focus of Provision 7.","الممارسة المبنية على الأدلة والابتكار هما محور الحكم السابع.",1,"صح."),
+      T("Research integrity is part of Provision 9.","نزاهة البحث هي جزء من الحكم التاسع.",0,"خطأ: هو من الحكم 7."),
+      T("Provision 7 concerns advancing the profession through research and policy.","يتعلق الحكم السابع بتطوير المهنة من خلال البحث والسياسات.",1,"صح."),
+      T("Provision 9 integrates social justice principles into nursing and health policy.","يدمج الحكم التاسع مبادئ العدالة الاجتماعية في التمريض والسياسة الصحية.",1,"صح."),
+      T("Provision 9 concerns self-care of the nurse.","يتعلق الحكم التاسع بالرعاية الذاتية للممرضة.",0,"خطأ: الرعاية الذاتية هي الحكم 5."),
+      T("Provision 8 involves collaboration to protect human rights and reduce health disparities.","يتضمن الحكم الثامن التعاون لحماية حقوق الإنسان والحد من التفاوتات الصحية.",1,"صح."),
+      T("Provision 8 is about advancing the profession.","الحكم الثامن يدور حول تطوير المهنة.",0,"خطأ: هذا الحكم 7."),
+      T("Provision 7 is about integrating social justice into health policy.","الحكم السابع يدور حول دمج العدالة الاجتماعية في السياسة الصحية.",0,"خطأ: هذا الحكم 9.")
+    ]
+  },
+  {
+    name: "المعضلة الأخلاقية: التعريفات",
+    nameEn: "Ethical Dilemma: Definitions",
+    questions: [
+      M("An ethical dilemma is best described as:","أفضل وصف للمعضلة الأخلاقية هو:",["A disagreement about working hours|خلاف حول ساعات العمل","A breach of hospital policy only|انتهاك لسياسة المستشفى فقط","A situation with one obvious right answer|موقف به إجابة صحيحة واحدة واضحة","A complex situation involving an apparent mental conflict between moral imperatives, where obeying one means transgressing another|موقف معقد يتضمن صراعاً ذهنياً ظاهرياً بين الحتميات الأخلاقية، حيث يعني إطاعة أحدهما انتهاك الآخر"],3,"معضلة أخلاقية: تعارض بين التزامات أخلاقية، طاعة أحدها تعني مخالفة الآخر."),
+      M("An ethical dilemma occurs when there is a conflict between:","تحدث المعضلة الأخلاقية عندما يكون هناك صراع بين:",["Two or more ethical principles|مبدأين أخلاقيين أو أكثر","Two laws only|قانونين فقط","Two hospital departments|قسمين في المستشفى","The nurse and the physician's schedule|الممرضة وجدول الطبيب"],0,"تعارض بين مبدأين أخلاقيين أو أكثر."),
+      M("In an ethical dilemma, the most beneficial decision:","في المعضلة الأخلاقية، القرار الأكثر نفعاً:",["Is always the nurse's choice|هو دائماً خيار الممرضة","Is always the legal one|هو دائماً القانوني","Depends on the circumstances|يعتمد على الظروف","Is always the first option|هو دائماً الخيار الأول"],2,"لا يوجد خيار صحيح أو خاطئ والأفضل حسب الظروف."),
+      M("A moral belief is:","الاعتقاد الأخلاقي هو:",["An opinion that changes with each situation|رأي يتغير مع كل موقف","A hospital policy|سياسة المستشفى","A rule written in the law|قاعدة مكتوبة في القانون","A personal conviction that something is absolutely right or wrong in all situations|قناعة شخصية بأن شيئاً ما صحيح أو خاطئ تماماً في جميع المواقف"],3,"الاعتقاد الأخلاقي قناعة شخصية بصواب أو خطأ مطلق."),
+      M("A moral dilemma exists because a person:","توجد المعضلة الأخلاقية لأن الشخص:",["Has no available options|ليس لديه خيارات متاحة","Knows what is right but does not want to do it|يعرف الصواب لكنه لا يريد فعله","Is forced by law to act|مُجبر بموجب القانون على التصرف","Does not know what is right|لا يعرف ما هو الصواب"],1,"يعرف الصواب لكنه لا يريد فعله."),
+      T("An ethical dilemma occurs when two or more ethical principles conflict.","تحدث المعضلة الأخلاقية عندما يتعارض مبدآن أخلاقيان أو أكثر.",1,"صح."),
+      T("A moral dilemma exists when one knows what is right but does not want to do it.","توجد المعضلة الأخلاقية عندما يعرف المرء ما هو الصواب لكنه لا يريد فعله.",1,"صح."),
+      T("Ethical dilemmas always have one clearly right option.","المعضلات الأخلاقية دائماً لها خيار صحيح واحد واضح.",0,"خطأ: لا يوجد خيار صحيح أو خاطئ والأمر يعتمد على الظروف."),
+      T("A moral belief depends on the circumstances of each situation.","يعتمد الاعتقاد الأخلاقي على ظروف كل موقف.",0,"خطأ: هو اقتناع بصواب أو خطأ مطلق في كل المواقف."),
+      T("A moral belief is a personal conviction that something is absolutely right or wrong in all situations.","الاعتقاد الأخلاقي هو قناعة شخصية بأن شيئاً ما صحيح أو خاطئ تماماً في جميع المواقف.",1,"صح."),
+      T("In an ethical dilemma the best decision depends on the circumstances.","في المعضلة الأخلاقية، القرار الأفضل يعتمد على الظروف.",1,"صح."),
+      T("A moral dilemma exists when one does not know what is right.","توجد المعضلة الأخلاقية عندما لا يعرف المرء ما هو الصواب.",0,"خطأ: يعرف الصواب لكن لا يريد فعله."),
+      T("In an ethical dilemma, obeying one imperative never means transgressing another.","في المعضلة الأخلاقية، إطاعة حتمية واحدة لا تعني أبداً انتهاك أخرى.",0,"خطأ: طاعة أحدها تعني مخالفة الآخر."),
+      T("An ethical dilemma occurs when two or more ethical principles conflict with each other.","تحدث المعضلة الأخلاقية عندما يتعارض مبدآن أخلاقيان أو أكثر مع بعضهما البعض.",1,"صح.",1),
+      M("Which of the following is an example of a moral dilemma?","أي مما يلي هو مثال على المعضلة الأخلاقية؟",["Knowing what is right but not wanting to do it|معرفة الصواب ولكن عدم الرغبة في فعله","Following hospital policies|اتباع سياسات المستشفى","Collecting patient data|جمع بيانات المريض","Administering prescribed medication|إعطاء الدواء الموصوف"],0,"المعضلة الأخلاقية: معرفة الصواب ولكن عدم الرغبة في فعله.",1)
+    ]
+  },
+  {
+    name: "أنواع المعضلات الأخلاقية",
+    nameEn: "Types of Ethical Dilemma",
+    questions: [
+      M("Which dilemma occurs only when two or more ethical standards apply to a situation but conflict with each other?","أي معضلة تحدث فقط عندما ينطبق معياران أخلاقيان أو أكثر على موقف ما ولكن يتعارضان مع بعضهما البعض؟",["Legal dilemma|معضلة قانونية","Moral dilemma|معضلة أخلاقية","Absolute (pure) ethical dilemma|معضلة أخلاقية مطلقة (نقية)","Approximate ethical dilemma|معضلة أخلاقية تقريبية"],2,"المعضلة المطلقة."),
+      M("Complicated situations requiring a decision, involving conflicts between values, laws and policies, are called:","المواقف المعقدة التي تتطلب اتخاذ قرار، والتي تتضمن صراعات بين القيم والقوانين والسياسات، تسمى:",["Moral beliefs|المعتقدات الأخلاقية","Approximate ethical dilemmas|المعضلات الأخلاقية التقريبية","Absolute ethical dilemmas|المعضلات الأخلاقية المطلقة","Ethical frameworks|الأطر الأخلاقية"],1,"المعضلات التقريبية."),
+      M("A rural clinician with limited mental health services is consulted by a patient with agoraphobia, outside his competence. This is an example of:","يستشير طبيب ريفي لديه خدمات صحة نفسية محدودة مريضاً يعاني من رهاب الخلاء، وهو خارج نطاق كفاءته. هذا مثال على:",["Legal negligence|الإهمال القانوني","Moral belief|الاعتقاد الأخلاقي","Approximate dilemma|المعضلة التقريبية","Absolute dilemma|المعضلة المطلقة"],3,"مثال على المعضلة المطلقة."),
+      M("A provider is legally obligated to report child abuse but is concerned about confidentiality. This is an example of:","المزود ملزم قانوناً بالإبلاغ عن إساءة معاملة الأطفال ولكنه قلق بشأن السرية. هذا مثال على:",["Approximate dilemma|المعضلة التقريبية","Absolute dilemma|المعضلة المطلقة","Ethical framework|الإطار الأخلاقي","Moral belief|الاعتقاد الأخلاقي"],0,"مثال على المعضلة التقريبية: تعارض الالتزام القانوني والسرية."),
+      M("In the agoraphobia example, declining on the basis of lack of competence would likely mean:","في مثال رهاب الخلاء، فإن الرفض على أساس نقص الكفاءة يعني على الأرجح:",["The law is violated|انتهاك القانون","The clinician avoids all ethical issues|تجنب الطبيب جميع القضايا الأخلاقية","The patient receives better services|حصول المريض على خدمات أفضل","The patient might not receive any services|قد لا يحصل المريض على أي خدمات"],3,"قد لا يحصل المريض على أي خدمة."),
+      T("Approximate dilemmas do not require any decision.","المعضلات التقريبية لا تتطلب أي قرار.",0,"خطأ: هي مواقف معقدة تتطلب قراراً."),
+      T("An absolute dilemma occurs when two or more ethical standards apply but conflict with each other.","تحدث المعضلة المطلقة عندما ينطبق معياران أخلاقيان أو أكثر ولكن يتعارضان.",1,"صح."),
+      T("An absolute dilemma occurs when only one ethical standard applies.","تحدث المعضلة المطلقة عندما ينطبق معيار أخلاقي واحد فقط.",0,"خطأ: تتعارض معيارين أخلاقيين أو أكثر."),
+      T("Reporting child abuse versus keeping confidentiality is an example of an absolute dilemma.","الإبلاغ عن إساءة معاملة الأطفال مقابل الحفاظ على السرية هو مثال على المعضلة المطلقة.",0,"خطأ: هو مثال على المعضلة التقريبية."),
+      T("Agoraphobia is a fear of open and public spaces.","رهاب الخلاء هو الخوف من الأماكن المفتوحة والعامة.",1,"صح."),
+      T("Approximate dilemmas may involve conflicts between values, laws and policies.","قد تتضمن المعضلات التقريبية صراعات بين القيم والقوانين والسياسات.",1,"صح."),
+      T("Agoraphobia is a fear of closed spaces.","رهاب الخلاء هو الخوف من الأماكن المغلقة.",0,"خطأ: هو الخوف من الأماكن المفتوحة والعامة."),
+      T("The conflict between the legal requirement to report abuse and confidentiality is an approximate dilemma.","الصراع بين الالتزام القانوني بالإبلاغ عن الإساءة والسرية هو معضلة تقريبية.",1,"صح."),
+      M("Which of the following is an example of an approximate ethical dilemma?","أي مما يلي هو مثال على المعضلة الأخلاقية التقريبية؟",["Conflict between two ethical principles only|صراع بين مبدأين أخلاقيين فقط","Reporting child abuse while maintaining patient confidentiality|الإبلاغ عن إساءة معاملة الأطفال مع الحفاظ على سرية المريض","Following routine nursing procedures|اتباع إجراءات التمريض الروتينية","Administering medication as prescribed|إعطاء الدواء حسب الوصفة"],1,"المعضلة التقريبية: تعارض بين الالتزام القانوني والسرية.",1),
+      T("An absolute ethical dilemma occurs when ethical standards are in conflict with each other.","تحدث المعضلة الأخلاقية المطلقة عندما تتعارض المعايير الأخلاقية مع بعضها البعض.",1,"صح.",1),
+      T("Approximate ethical dilemmas may involve conflicts between values, laws, and policies.","قد تتضمن المعضلات الأخلاقية التقريبية صراعات بين القيم والقوانين والسياسات.",1,"صح.",1)
+    ]
+  },
+  {
+    name: "كيفية حل المعضلة الأخلاقية",
+    nameEn: "Resolving the Ethical Dilemma",
+    questions: [
+      M("An ethical dilemma can be resolved:","يمكن حل المعضلة الأخلاقية:",["By the patient's family only|من قبل عائلة المريض فقط","Individually or in a group process such as a multidisciplinary team|فردياً أو في عملية جماعية مثل فريق متعدد التخصصات","Only through the courts|فقط من خلال المحاكم","By the physician only|من قبل الطبيب فقط"],1,"فردياً أو عبر فريق متعدد التخصصات."),
+      M("In the preliminary analysis, the first step is to determine whether the dilemma is:","في التحليل الأولي، الخطوة الأولى هي تحديد ما إذا كانت المعضلة:",["Absolute or approximate|مطلقة أم تقريبية","Medical or surgical|طبية أم جراحية","Legal or illegal|قانونية أم غير قانونية","Minor or major|ثانوية أم رئيسية"],0,"تحديد هل المعضلة مطلقة أم تقريبية."),
+      M("The preliminary analysis also requires distinguishing between:","يتطلب التحليل الأولي أيضاً التمييز بين:",["Day and night shifts|المناوبات النهارية والليلية","Public and private hospitals|المستشفيات العامة والخاصة","Personal and professional dimensions|الأبعاد الشخصية والمهنية","Nurse and manager roles|أدوار الممرضة والمدير"],2,"التمييز بين البعد الشخصي والمهني."),
+      M("After the preliminary analysis, what is appropriately applied?","بعد التحليل الأولي، ما الذي يتم تطبيقه بشكل مناسب؟",["A staffing plan|خطة التوظيف","An ethical decision-making model|نموذج لاتخاذ القرار الأخلاقي","A disciplinary action|إجراء تأديبي","A court order|أمر محكمة"],1,"يطبق نموذج لاتخاذ القرار الأخلاقي."),
+      M("Which of the following is one of the key questions to ask?","أي مما يلي هو أحد الأسئلة الرئيسية التي يجب طرحها؟",["What is the insurance company?|ما هي شركة التأمين؟","How much will the hospital earn?|كم سيكسب المستشفى؟","Who will be punished?|من سيعاقب؟","What are the alternative actions?|ما هي الإجراءات البديلة؟"],3,"من الأسئلة الرئيسية: ما الإجراءات البديلة؟"),
+      M("Identifying the ethical, moral, legal and values considerations belongs to:","تحديد الاعتبارات الأخلاقية والمعنوية والقانونية والقيمية ينتمي إلى:",["Documentation|التوثيق","Punishment|العقاب","Preliminary analysis|التحليل الأولي","Evaluation of outcomes|تقييم النتائج"],2,"من خطوات التحليل الأولي."),
+      T("An ethical dilemma can only be resolved individually.","لا يمكن حل المعضلة الأخلاقية إلا بشكل فردي.",0,"خطأ: يمكن فردياً أو جماعياً."),
+      T("'Are there relevant legal issues?' is one of the key questions to ask.","'هل هناك قضايا قانونية ذات صلة؟' هو أحد الأسئلة الرئيسية التي يجب طرحها.",1,"صح."),
+      T("An ethical dilemma may be resolved through a multidisciplinary team process.","يمكن حل المعضلة الأخلاقية من خلال عملية فريق متعدد التخصصات.",1,"صح."),
+      T("An ethical decision-making model is applied before any analysis of the dilemma.","يتم تطبيق نموذج اتخاذ القرار الأخلاقي قبل أي تحليل للمعضلة.",0,"خطأ: بعد التحليل الأولي."),
+      T("The preliminary analysis excludes legal considerations.","يستبعد التحليل الأولي الاعتبارات القانونية.",0,"خطأ: تشمل الاعتبارات القانونية."),
+      T("An ethical decision-making model is applied after the preliminary analysis.","يتم تطبيق نموذج اتخاذ القرار الأخلاقي بعد التحليل الأولي.",1,"صح."),
+      T("The preliminary analysis distinguishes between personal and professional dimensions.","يميز التحليل الأولي بين الأبعاد الشخصية والمهنية.",1,"صح."),
+      T("'What are the alternative actions?' is not among the key questions.","'ما هي الإجراءات البديلة؟' ليس من بين الأسئلة الرئيسية.",0,"خطأ: هي من الأسئلة الرئيسية."),
+      M("Which of the following should be considered when resolving an ethical dilemma?","أي مما يلي يجب مراعاته عند حل المعضلة الأخلاقية؟",["The people involved|الأشخاص المعنيون","Relevant legal issues|القضايا القانونية ذات الصلة","Alternative actions|الإجراءات البديلة","All of the above|كل ما سبق"],3,"يجب مراعاة كل ما سبق عند حل المعضلة.",1)
+    ]
+  },
+  {
+    name: "المعضلات الأخلاقية الشائعة",
+    nameEn: "Common Ethical Dilemmas",
+    questions: [
+      M("A patient rejects medical advice and makes a decision that may lead to a less optimal outcome. This is the dilemma of:","يرفض المريض النصيحة الطبية ويتخذ قراراً قد يؤدي إلى نتيجة أقل مثالية. هذه هي معضلة:",["Patient freedom vs. nurse control|حرية المريض مقابل سيطرة الممرض","Reproductive rights|الحقوق الإنجابية","Minor dilemma|المعضلة الثانوية","Resource management|إدارة الموارد"],0,"حرية المريض مقابل سيطرة الممرض."),
+      M("The pro-choice vs. pro-life argument is a dilemma of:","جدال الاختيار مقابل الحياة هو معضلة:",["Resource management|إدارة الموارد","Honesty vs. information|الصدق مقابل المعلومات","Patient freedom vs. nurse control|حرية المريض مقابل سيطرة الممرض","Reproductive rights|الحقوق الإنجابية"],3,"الحقوق الإنجابية."),
+      M("Families withhold truthful information to 'protect' a patient from emotional distress. This is the dilemma of:","تحجب العائلات المعلومات الصادقة 'لحماية' المريض من الضيق العاطفي. هذه هي معضلة:",["Honesty vs. information|الصدق مقابل المعلومات","Resource management|إدارة الموارد","Minor dilemma|المعضلة الثانوية","Reproductive rights|الحقوق الإنجابية"],0,"الصدق مقابل المعلومات."),
+      M("With minors, the nurse's ultimate responsibility is to:","مع القاصرين، تقع المسؤولية النهائية للممرضة على:",["The parents|الوالدين","The patient|المريض","The hospital|المستشفى","The insurance company|شركة التأمين"],1,"المسؤولية النهائية للمريض."),
+      M("Although minors have basic privacy rights, the law requires disclosure of certain information to:","على الرغم من أن القاصرين لديهم حقوق خصوصية أساسية، إلا أن القانون يتطلب الإفصاح عن معلومات معينة لـ:",["Teachers|المعلمين","The media|وسائل الإعلام","Parents|الوالدين","Neighbors|الجيران"],2,"القانون يلزم بإفشاء بعض المعلومات للوالدين."),
+      M("A patient in a medically futile vegetative state has high maintenance costs. The dilemma concerns:","المريض في حالة إنباتية ميؤوس منها طبياً لديه تكاليف صيانة عالية. تتعلق المعضلة بـ:",["Honesty vs. information|الصدق مقابل المعلومات","Resource management|إدارة الموارد","Reproductive rights|الحقوق الإنجابية","Minor dilemma|المعضلة الثانوية"],1,"إدارة الموارد."),
+      M("Nurses do not sign the Hippocratic Oath, but they are still bound by:","الممرضات لا يوقعن على قسم أبقراط، لكنهن لا يزلن ملزمات بـ:",["A promise to devote themselves to patient welfare and live up to professional standards|وعد بتكريس أنفسهن لرفاهية المرضى والارتقاء إلى مستوى المعايير المهنية","No professional obligations|لا التزامات مهنية","Only the law|القانون فقط","Hospital profits|أرباح المستشفى"],0,"ملتزمون برعاية رفاهية المرضى ومعايير المهنة."),
+      T("With minors, the nurse's ultimate responsibility is to the parents.","مع القاصرين، المسؤولية النهائية للممرضة تجاه الوالدين.",0,"خطأ: المسؤولية النهائية للمريض."),
+      T("Deciding what information will be shared, and how and when, is a difficult part of a nurse's responsibilities.","تحديد المعلومات التي ستتم مشاركتها وكيف ومتى، هو جزء صعب من مسؤوليات الممرضة.",1,"صح."),
+      T("With minors, the nurse's ultimate responsibility is to the patient.","مع القاصرين، المسؤولية النهائية للممرضة تجاه المريض.",1,"صح."),
+      T("Nurses sign the Hippocratic Oath.","الممرضات يوقعن على قسم أبقراط.",0,"خطأ: لا يوقعونه لكنهم ملتزمون برعاية المرضى."),
+      T("The reproductive rights dilemma is based on an individual's core values and beliefs.","تستند معضلة الحقوق الإنجابية إلى القيم والمعتقدات الأساسية للفرد.",1,"صح."),
+      T("Minors have basic privacy rights.","القاصرون لديهم حقوق خصوصية أساسية.",1,"صح."),
+      T("Minors have no privacy rights at all.","ليس للقاصرين أي حقوق خصوصية على الإطلاق.",0,"خطأ: لديهم حقوق خصوصية أساسية."),
+      T("Families always share truthful information with the patient.","تشارك العائلات دائماً معلومات صادقة مع المريض.",0,"خطأ: غالباً يحجبون المعلومات لحماية المريض.")
+    ]
+  },
+  {
+    name: "القتل الرحيم والاستنساخ",
+    nameEn: "Euthanasia & Cloning",
+    questions: [
+      M("Euthanasia, from the Greek, means:","القتل الرحيم، من اليونانية، يعني:",["Delayed death|تأخير الموت","Natural death|الموت الطبيعي","Forced death|الموت القسري","Good or gentle death|الموت الجيد أو اللطيف"],3,"موت جيد أو لطيف."),
+      M("Active euthanasia is:","القتل الرحيم النشط هو:",["'Letting die'|'ترك يموت'","Unknown wishes of the patient|رغبات غير معروفة للمريض","'Killing' or actively bringing about death|'القتل' أو إحداث الموت بشكل فعال","Requested by a competent person|مطلوب من قبل شخص كفء"],2,"القتل الرحيم النشط: إحداث الموت فعلياً."),
+      M("Passive euthanasia is:","القتل الرحيم السلبي هو:",["'Letting die'|'ترك يموت'","Actively bringing about death|إحداث الموت بشكل فعال","Cloning|الاستنساخ","Abortion|الإجهاض"],0,"القتل الرحيم السلبي: ترك المريض يموت."),
+      M("Euthanasia requested by a competent person is:","القتل الرحيم المطلوب من قبل شخص كفء هو:",["Involuntary|غير طوعي","Non-voluntary|غير طوعي (بدون معرفة)","Passive|سلبي","Voluntary|طوعي"],3,"طوعي."),
+      M("Euthanasia against the person's wishes or without obtaining permission is:","القتل الرحيم ضد رغبات الشخص أو دون الحصول على إذن هو:",["Active|نشط","Voluntary|طوعي","Involuntary|غير طوعي (لا إرادي)","Non-voluntary|غير طوعي (بدون معرفة)"],2,"غير طوعي."),
+      M("Euthanasia where it is not possible to know the person's wishes is:","القتل الرحيم حيث لا يمكن معرفة رغبات الشخص هو:",["Voluntary|طوعي","Non-voluntary|لا إرادي (غير معلوم الرغبة)","Involuntary|غير طوعي","Passive|سلبي"],1,"لا إرادي (غير معلوم الرغبة)."),
+      M("Cloning is:","الاستنساخ هو:",["Producing a genetically identical duplicate of an organism|إنتاج نسخة مطابقة وراثياً من كائن حي","Transplanting an organ|زرع عضو","Ending a pregnancy|إنهاء الحمل","Treating genetic disorders with drugs|علاج الاضطرابات الوراثية بالأدوية"],0,"إنتاج نسخة مطابقة وراثياً."),
+      M("The biggest problem with cloning is:","أكبر مشكلة في الاستنساخ هي:",["Shorter pregnancy|حمل أقصر","Slow animal growth|نمو بطيء للحيوان","Decline in genetic diversity|انخفاض التنوع الوراثي","Low cost|تكلفة منخفضة"],2,"انخفاض التنوع الوراثي."),
+      M("Why could a population with identical genetic information be at risk?","لماذا يمكن أن يكون السكان الذين لديهم معلومات وراثية متطابقة في خطر؟",["It would be immune to all diseases|سيكون محصناً ضد جميع الأمراض","A disease could wipe out the entire population|يمكن لمرض واحد أن يبيد جميع السكان","It would need less food|سيحتاج إلى طعام أقل","It would live too long|سيعيشون طويلاً جداً"],1,"نفس المادة الوراثية: مرض واحد قد يبيد الجميع."),
+      T("Passive euthanasia means actively bringing about death.","القتل الرحيم السلبي يعني إحداث الموت بشكل فعال.",0,"خطأ: السلبي هو ترك المريض يموت."),
+      T("Non-voluntary euthanasia is used when it is not possible to know the person's wishes.","يُستخدم القتل الرحيم غير الطوعي (اللاإرادي) عندما لا يكون من الممكن معرفة رغبات الشخص.",1,"صح."),
+      T("Cloning always produces perfect offspring without errors.","الاستنساخ ينتج دائماً ذرية مثالية دون أخطاء.",0,"خطأ: تحدث أخطاء وتشوهات."),
+      T("Religious organizations consider cloning unnatural.","تعتبر المنظمات الدينية الاستنساخ غير طبيعي.",1,"صح."),
+      T("Voluntary euthanasia is requested by a competent person.","القتل الرحيم الطوعي مطلوب من قبل شخص كفء.",1,"صح."),
+      T("Cloning increases genetic diversity.","الاستنساخ يزيد من التنوع الوراثي.",0,"خطأ: يقلل التنوع الوراثي."),
+      T("Cloning leads to a decline in genetic diversity.","يؤدي الاستنساخ إلى انخفاض التنوع الوراثي.",1,"صح."),
+      T("Active euthanasia means 'letting die'.","القتل الرحيم النشط يعني 'ترك يموت'.",0,"خطأ: النشط هو إحداث الموت."),
+      T("Euthanasia refers to mercy killing, the deliberate ending of life as a humane action.","يشير القتل الرحيم إلى القتل بدافع الرحمة، وهو الإنهاء المتعمد للحياة كعمل إنساني.",1,"صح."),
+      T("Involuntary euthanasia is requested by a competent person.","القتل الرحيم غير الطوعي مطلوب من قبل شخص كفء.",0,"خطأ: هو ضد رغبته أو دون إذنه."),
+      M("Which of the following is considered a possible disadvantage of cloning?","أي مما يلي يعتبر عيباً محتملاً للاستنساخ؟",["Increased genetic diversity|زيادة التنوع الوراثي","Reduction in genetic diversity|انخفاض التنوع الوراثي","Improved communication|تحسين التواصل","Increased patient autonomy|زيادة استقلالية المريض"],1,"الاستنساخ يقلل التنوع الوراثي.",1),
+      M("Which type of euthanasia is performed according to the request of a competent person?","أي نوع من القتل الرحيم يتم وفقاً لطلب شخص كفء؟",["Involuntary euthanasia|القتل الرحيم غير الطوعي","Non-voluntary euthanasia|القتل الرحيم اللاإرادي","Voluntary euthanasia|القتل الرحيم الطوعي","Passive euthanasia|القتل الرحيم السلبي"],2,"الطوعي: بناءً على طلب شخص كفء.",1),
+      T("Passive euthanasia refers to actively bringing about a person's death.","يشير القتل الرحيم السلبي إلى إحداث الموت بشكل فعال.",0,"خطأ: السلبي هو ترك المريض يموت.",1),
+      T("Cloning may lead to a reduction in genetic diversity.","قد يؤدي الاستنساخ إلى انخفاض التنوع الوراثي.",1,"صح.",1)
+    ]
+  },
+  {
+    name: "الإجهاض والموت الدماغي",
+    nameEn: "Abortion & Brain Death",
+    questions: [
+      M("Abortion is the termination of pregnancy:","الإجهاض هو إنهاء الحمل:",["After the 9th month|بعد الشهر التاسع","Only for medical reasons|لأسباب طبية فقط","After delivery|بعد الولادة","Before the viability of the fetus (before the end of the 6th month)|قبل قابلية الجنين للحياة (قبل نهاية الشهر السادس)"],3,"إنهاء الحمل قبل قابلية الجنين للحياة."),
+      M("Which is a moral argument regarding abortion?","أي مما يلي هو حجة أخلاقية بشأن الإجهاض؟",["The type of anesthesia|نوع التخدير","The cost of surgery|تكلفة الجراحة","A woman's right to reproductive autonomy|حق المرأة في الاستقلال الإنجابي","The hospital's size|حجم المستشفى"],2,"من الحجج: حق المرأة في الاستقلال الإنجابي."),
+      M("In brain death:","في الموت الدماغي:",["The heart may still be beating but the person is dead by redefinition|قد يظل القلب ينبض ولكن الشخص ميت بإعادة التعريف","The person breathes normally without help|يتنفس الشخص بشكل طبيعي دون مساعدة","The person is conscious|الشخص واعٍ","The heart has stopped|توقف القلب"],0,"القلب ينبض لكن الشخص ميت بإعادة التعريف."),
+      M("In diagnosing brain death, the patient must be:","في تشخيص الموت الدماغي، يجب أن يكون المريض:",["Fully conscious|واعياً تماماً","Deeply comatose|في غيبوبة عميقة","Lightly sedated|مخدراً بشكل خفيف","Asleep|نائماً"],1,"في غيبوبة عميقة."),
+      M("Which must be excluded as a cause before diagnosing brain death?","ما الذي يجب استبعاده كسبب قبل تشخيص الموت الدماغي؟",["Hypertension|ارتفاع ضغط الدم","Fever|الحمى","Dehydration only|الجفاف فقط","Primary hypothermia|انخفاض الحرارة الأولي"],3,"استبعاد انخفاض الحرارة الأولي."),
+      M("The patient with brain death is on a ventilator because:","المريض المصاب بموت دماغي على جهاز التنفس الصناعي للأسباب التالية:",["Spontaneous respiration became inadequate|أصبح التنفس التلقائي غير كافٍ","The heart stopped|توقف القلب","Of infection|بسبب العدوى","Of a broken leg|بسبب كسر في الساق"],0,"التنفس التلقائي أصبح غير كافي."),
+      T("In brain death the heart may still be beating.","في الموت الدماغي قد يظل القلب ينبض.",1,"صح."),
+      T("A brain-dead patient breathes adequately without a ventilator.","المريض المصاب بموت دماغي يتنفس بشكل كافٍ بدون جهاز تنفس.",0,"خطأ: يعتمد على جهاز التنفس."),
+      T("Abortion is termination of pregnancy before the end of the 6th month of gestation.","الإجهاض هو إنهاء الحمل قبل نهاية الشهر السادس من الحمل.",1,"صح."),
+      T("Abortion is termination of pregnancy after the fetus is viable.","الإجهاض هو إنهاء الحمل بعد أن يصبح الجنين قابلاً للحياة.",0,"خطأ: قبل قابلية الجنين للحياة."),
+      T("A woman's right to reproductive autonomy is a moral argument about abortion.","حق المرأة في الاستقلال الإنجابي هو حجة أخلاقية حول الإجهاض.",1,"صح."),
+      T("The cause leading to brain death should be fully established.","يجب إثبات السبب المؤدي إلى الموت الدماغي بشكل كامل.",1,"صح."),
+      T("Suspicion of depressant drugs is acceptable when diagnosing brain death.","الاشتباه في الأدوية المثبطة مقبول عند تشخيص الموت الدماغي.",0,"خطأ: يجب ألا يكون هناك اشتباه في الأدوية المثبطة."),
+      T("A brain-dead person must have a stopped heartbeat.","يجب أن يكون الشخص المصاب بموت دماغي قد توقف قلبه.",0,"خطأ: قد يظل القلب ينبض.")
+    ]
+  },
+  {
+    name: "الصراعات الأخلاقية وعواقب السلوك غير الأخلاقي",
+    nameEn: "Ethical Conflicts & Consequences",
+    questions: [
+      M("Whether to tell a breast cancer patient the complete truth or soft-pedal the bad news is a conflict between:","ما إذا كان يجب إخبار مريضة سرطان الثدي بالحقيقة الكاملة أو التخفيف من الأخبار السيئة هو صراع بين:",["Beneficence and autonomy only|الإحسان والاستقلالية فقط","Confidentiality and justice|السرية والعدالة","Veracity and non-maleficence|الصدق وعدم الإضرار","Justice and fidelity|العدالة والوفاء"],2,"تعارض بين الصدق وعدم الإضرار."),
+      M("Not telling the patient the truth violates the principle of:","عدم إخبار المريض بالحقيقة ينتهك مبدأ:",["Fidelity only|الوفاء فقط","Justice|العدالة","Competence|الكفاءة","Autonomy|الاستقلالية"],3,"يمنع المريض من اتخاذ قرار مستنير."),
+      M("Which is a consequence of unethical behavior?","أي مما يلي هو نتيجة للسلوك غير الأخلاقي؟",["Lower fines|غرامات أقل","Lawsuits|الدعاوى القضائية","Easier recruiting|توظيف أسهل","Higher morale|روح معنوية أعلى"],1,"من العواقب: الدعاوى القضائية."),
+      M("A nurse is caught between what she ought to do (based on one principle) and what she ought not to do (based on another). This is:","الممرضة عالقة بين ما يجب عليها فعله (بناءً على مبدأ واحد) وما لا يجب عليها فعله (بناءً على مبدأ آخر). هذا هو:",["A moral belief|الاعتقاد الأخلاقي","A legal contract|عقد قانوني","An ethical conflict|صراع أخلاقي","An accountability issue|قضية مساءلة"],2,"صراع أخلاقي."),
+      M("Consequences of unethical behavior include:","تشمل عواقب السلوك غير الأخلاقي:",["Fewer scandals|فضائح أقل","Ruined careers and injured organization reputation|تدمير المهن وإساءة سمعة المؤسسة","Better public image|صورة عامة أفضل","Reduced time waste|تقليل إهدار الوقت"],1,"تدمر المهن وإساءة سمعة المؤسسة."),
+      T("Oppressive legislation can be a consequence of unethical behavior.","يمكن أن يكون التشريع القمعي نتيجة للسلوك غير الأخلاقي.",1,"صح."),
+      T("Unethical behavior raises staff morale.","السلوك غير الأخلاقي يرفع الروح المعنوية للموظفين.",0,"خطأ: يؤدي لانخفاض الروح المعنوية."),
+      T("Telling a cancer patient the truth is a conflict between justice and fidelity.","إخبار مريض السرطان بالحقيقة هو صراع بين العدالة والوفاء.",0,"خطأ: هو تعارض بين الصدق وعدم الإضرار."),
+      T("Lawsuits and criminal charges are consequences of unethical behavior.","الدعاوى القضائية والتهم الجنائية هي عواقب للسلوك غير الأخلاقي.",1,"صح."),
+      T("Soft-pedaling bad news fully respects the patient's autonomy.","التخفيف من الأخبار السيئة يحترم تماماً استقلالية المريض.",0,"خطأ: ينتهك الاستقلالية."),
+      T("An ethical conflict involves what you ought to do based on one principle and what you ought not to do based on another.","يتضمن الصراع الأخلاقي ما يجب عليك فعله بناءً على مبدأ وما لا يجب عليك فعله بناءً على مبدأ آخر.",1,"صح."),
+      T("Unethical behavior makes recruiting easier.","السلوك غير الأخلاقي يجعل التوظيف أسهل.",0,"خطأ: يسبب صعوبات في التوظيف."),
+      T("Not telling a patient the truth violates autonomy by denying the right to make an informed choice.","عدم إخبار المريض بالحقيقة ينتهك الاستقلالية بحرمانه من حق اتخاذ قرار مستنير.",1,"صح.")
+    ]
+  },
+  {
+    name: "الأطر الأخلاقية لاتخاذ القرار",
+    nameEn: "Ethical Frameworks",
+    questions: [
+      M("Ethical frameworks:","الأطر الأخلاقية:",["Replace the law|تحل محل القانون","Are only used by managers|يستخدمها المديرون فقط","Solve the dilemma automatically|تحل المعضلة تلقائياً","Guide individuals and clarify personal values without solving the problem|توجه الأفراد وتوضح القيم الشخصية دون حل المشكلة"],3,"لا تحل المشكلة لكنها توضح القيم والمعتقدات."),
+      M("Which are the four most commonly used ethical frameworks?","ما هي الأطر الأخلاقية الأربعة الأكثر استخداماً؟",["Utilitarianism, duty-based, rights-based and intuitionism|النفعية، القائمة على الواجب، القائمة على الحقوق، والحدسية","Law, ethics, values and morals|القانون والأخلاق والقيم والأخلاقيات","Autonomy, justice, fidelity and veracity|الاستقلالية والعدالة والوفاء والصدق","Assault, battery, negligence and malpractice|الاعتداء والضرب والإهمال وسوء الممارسة"],0,"الأطر الأربعة الأكثر استخداماً."),
+      M("The framework that encourages decisions for the greatest good for the greatest number is:","الإطار الذي يشجع القرارات لتحقيق أكبر خير لأكبر عدد هو:",["Deontological|الواجبي","Intuitionist|الحدسي","Teleological (utilitarianism)|الغائي (النفعية)","Rights-based|القائم على الحقوق"],2,"النفعية (الغائية)."),
+      M("The theory that judges actions right or wrong regardless of consequences is:","النظرية التي تحكم على الأفعال بالصواب أو الخطأ بغض النظر عن العواقب هي:",["Deontological theory|النظرية الواجبية","Consequentialism|العاقبية","Utilitarianism|النفعية","Intuitionism|الحدسية"],0,"النظرية الواجبية."),
+      M("Deontological theory is based on the philosophy of:","تستند النظرية الواجبية إلى فلسفة:",["Hippocrates|أبقراط","Florence Nightingale|فلورنس نايتنجيل","Aristotle only|أرسطو فقط","Emanuel Kant|إيمانويل كانط"],3,"كانط."),
+      M("Decisions that must be made because there is a duty to do or refrain from something follow:","القرارات التي يجب اتخاذها بسبب وجود واجب للقيام بشيء أو الامتناع عنه تتبع:",["Rights-based reasoning|التفكير القائم على الحقوق","Duty-based reasoning|التفكير القائم على الواجب","Utilitarianism|النفعية","Intuitionism|الحدسية"],1,"التفكير القائم على الواجب."),
+      M("The belief that some things are a person's just due follows:","الاعتقاد بأن بعض الأشياء هي حق عادل للشخص يتبع:",["Utilitarianism|النفعية","Duty-based reasoning|التفكير القائم على الواجب","Intuitionism|الحدسية","Rights-based reasoning|التفكير القائم على الحقوق"],3,"التفكير القائم على الحقوق."),
+      M("Weighing goals, duties and rights case by case, mainly by intuition, is the:","موازنة الأهداف والواجبات والحقوق حالة بحالة، بشكل أساسي عن طريق الحدس، هو:",["Utilitarian theory|النظرية النفعية","Intuitionist framework|الإطار الحدسي","Deontological theory|النظرية الواجبية","Teleological theory|النظرية الغائية"],1,"الإطار الحدسي."),
+      T("Rights are the same as needs and wants.","الحقوق هي نفس الاحتياجات والرغبات.",0,"خطأ: تختلف عنها."),
+      T("In the intuitionist framework, weighting is determined primarily by intuition.","في الإطار الحدسي، يتم تحديد الترجيح في المقام الأول عن طريق الحدس.",1,"صح."),
+      T("Utilitarianism is based on Kant's philosophy.","تستند النفعية إلى فلسفة كانط.",0,"خطأ: كانط للنظرية الواجبة."),
+      T("Rights differ from needs, wants or desires.","تختلف الحقوق عن الاحتياجات أو الرغبات.",1,"صح."),
+      T("Utilitarianism is also called consequentialist theory.","تسمى النفعية أيضاً النظرية العاقبية.",1,"صح."),
+      T("Ethical frameworks solve the ethical problem for the decision maker.","تحل الأطر الأخلاقية المشكلة الأخلاقية لصانع القرار.",0,"خطأ: تساعد على توضيح القيم فقط."),
+      T("Deontological theory is based on Emanuel Kant's philosophy.","تستند النظرية الواجبية إلى فلسفة إيمانويل كانط.",1,"صح."),
+      T("Deontological theory judges actions mainly by their consequences.","تحكم النظرية الواجبية على الأفعال بشكل أساسي من خلال عواقبها.",0,"خطأ: يحكم بغض النظر عن العواقب."),
+      M("Which ethical framework evaluates an action according to its consequences?","أي إطار أخلاقي يقيّم الفعل وفقاً لعواقبه؟",["Utilitarianism|النفعية","Deontological theory|النظرية الواجبية","Duty-based reasoning|التفكير القائم على الواجب","Rights-based reasoning|التفكير القائم على الحقوق"],0,"النفعية (العاقبية) تقيّم الفعل وفقاً لعواقبه.",1),
+      M("Which ethical framework is based on the greatest good for the greatest number?","أي إطار أخلاقي يستند إلى تحقيق أكبر خير لأكبر عدد؟",["Deontological theory|النظرية الواجبية","Utilitarianism|النفعية","Rights-based reasoning|التفكير القائم على الحقوق","Intuitionism|الحدسية"],1,"النفعية: أكبر خير لأكبر عدد.",1),
+      T("Utilitarianism focuses on achieving the greatest good for the greatest number of people.","تركز النفعية على تحقيق أكبر خير لأكبر عدد من الناس.",1,"صح.",1)
+    ]
+  },
+  {
+    name: "حل المشكلات الأخلاقية ودور مدير التمريض",
+    nameEn: "Ethical Problem Solving & Nurse Manager Role",
+    questions: [
+      M("The quality of an ethical decision should be evaluated by:","يجب تقييم جودة القرار الأخلاقي من خلال:",["The process used to make the decision|العملية المستخدمة لاتخاذ القرار","The number of people involved|عدد الأشخاص المشاركين","The outcome only|النتيجة فقط","The cost|التكلفة"],0,"بالعملية المستخدمة لا بالنتيجة وحدها."),
+      M("Why can outcomes alone not assess the quality of problem solving?","لماذا لا يمكن للنتائج وحدها تقييم جودة حل المشكلات؟",["Outcomes are always accurate|النتائج دقيقة دائماً","Outcomes are fixed by law|النتائج يحددها القانون","Many variables affect outcomes, some beyond the problem solver's control|العديد من المتغيرات تؤثر على النتائج، وبعضها خارج سيطرة صانع القرار","Outcomes are never important|النتائج لا تهم أبداً"],2,"متغيرات كثيرة تؤثر في النتائج."),
+      M("The best decisions stem from:","أفضل القرارات تنبع من:",["Following the majority|اتباع الأغلبية","Avoiding decisions|تجنب القرارات","Quick intuition only|الحدس السريع فقط","Structured problem solving, adequate data collection and examination of alternatives|حل المشكلات المنظم وجمع البيانات الكافية وفحص البدائل"],3,"حل منظم وجمع بيانات وفحص بدائل."),
+      M("Much of the difficulty in ethical decisions comes from:","الكثير من الصعوبة في القرارات الأخلاقية يأتي من:",["Too much education|الكثير من التعليم","A lack of formal education about problem solving|نقص التعليم الرسمي حول حل المشكلات","Too many laws|الكثير من القوانين","Excess staff|زيادة الموظفين"],1,"نقص التعليم الرسمي في حل المشكلات."),
+      M("Which is a role of the nurse manager?","أي مما يلي هو دور مدير التمريض؟",["Create a formal code of ethics articulating organizational values and standards|إنشاء مدونة أخلاقيات رسمية توضح قيم ومعايير المنظمة","Avoid public statements|تجنب البيانات العامة","Ignore unethical behavior|تجاهل السلوك غير الأخلاقي","Reward all behavior equally|مكافأة جميع السلوكيات بالتساوي"],0,"إنشاء مدونة أخلاقيات رسمية."),
+      M("The nurse manager should:","يجب على مدير التمريض:",["Do nothing about behavior|لا يفعل شيئاً بشأن السلوك","Punish ethical behavior|معاقبة السلوك الأخلاقي","Reward ethical behavior and punish unethical behavior|مكافأة السلوك الأخلاقي ومعاقبة السلوك غير الأخلاقي","Reward only productivity|مكافأة الإنتاجية فقط"],2,"مكافأة السلوك الأخلاقي ومعاقبة غير الأخلاقي."),
+      T("Ethical concepts and problem-solving skills must be taught as part of all decision making.","يجب تدريس المفاهيم الأخلاقية ومهارات حل المشكلات كجزء من جميع عمليات صنع القرار.",1,"صح."),
+      T("The nurse manager should avoid developing policies specifying ethical objectives.","يجب على مدير التمريض تجنب تطوير سياسات تحدد الأهداف الأخلاقية.",0,"خطأ: عليه وضع سياسات تحدد الأهداف الأخلاقية."),
+      T("The nurse manager should reward ethical behavior.","يجب على مدير التمريض مكافأة السلوك الأخلاقي.",1,"صح."),
+      T("The nurse manager should create a formal code of ethics.","يجب على مدير التمريض إنشاء مدونة أخلاقيات رسمية.",1,"صح."),
+      T("The nurse manager should not punish unethical behavior.","يجب على مدير التمريض عدم معاقبة السلوك غير الأخلاقي.",0,"خطأ: يعاقب السلوك غير الأخلاقي."),
+      T("Even the most ethical actions can have undesirable consequences.","حتى الأفعال الأخلاقية يمكن أن يكون لها عواقب غير مرغوب فيها.",1,"صح."),
+      T("A poor outcome always means the decision was made poorly.","النتيجة السيئة تعني دائماً أن القرار قد تم اتخاذه بشكل سيئ.",0,"خطأ: قد تكون القرارات المنظمة نتائجها سيئة."),
+      T("The quality of a decision should be judged by its outcome alone.","يجب الحكم على جودة القرار من خلال نتيجته وحدها.",0,"خطأ: يقيّم بالعملية المستخدمة."),
+      M("Which of the following is an important responsibility of the nurse manager in promoting ethical behavior?","أي مما يلي هو مسؤولية مهمة لمدير التمريض في تعزيز السلوك الأخلاقي؟",["Ignoring unethical behavior|تجاهل السلوك غير الأخلاقي","Avoiding the development of ethical policies|تجنب تطوير السياسات الأخلاقية","Rewarding ethical behavior and taking action against unethical behavior|مكافأة السلوك الأخلاقي واتخاذ إجراء ضد السلوك غير الأخلاقي","Allowing staff to ignore professional standards|السماح للموظفين بتجاهل المعايير المهنية"],2,"مدير التمريض يكافح السلوك الأخلاقي ويعاقب غير الأخلاقي.",1),
+      T("The quality of ethical decision-making should be evaluated only according to the final outcome.","يجب تقييم جودة اتخاذ القرار الأخلاقي فقط وفقاً للنتيجة النهائية.",0,"خطأ: التقييم بالعملية المستخدمة وليس النتيجة فقط.",1),
+      T("The nurse manager should ignore unethical behavior to maintain good relationships with staff.","يجب على مدير التمريض تجاهل السلوك غير الأخلاقي للحفاظ على علاقات جيدة مع الموظفين.",0,"خطأ: يجب معالجة السلوك غير الأخلاقي.",1)
+    ]
+  }
+];
+
+function buildSeparateSections(originalBank) {
+  const newBank = [];
+  originalBank.forEach(sec => {
+    const mcq = [], tf = [];
+    sec.questions.forEach(q => {
+      if (q.isTF !== undefined && q.isTF !== null) tf.push(q);
+      else mcq.push(q);
+    });
+    const combined = [...mcq, ...tf].map((q, idx) => ({ ...q, num: idx + 1 }));
+    newBank.push({ name: sec.name, nameEn: sec.nameEn, originalName: sec.name, questions: combined });
+  });
+  return newBank;
+}
+
+const QUESTION_BANK = buildSeparateSections(ORIGINAL_BANK);
+const LS_KEY = 'nursing_ethics_l1_l3_v1';
+const TRANS_CACHE_KEY = 'ethics_l3_trans_cache_v1';
+let transCache = {};
+let state = {
+  mode: 'practice', order: 'device', showTranslation: true, timerSeconds: 0,
+  quizQuestions: [], currentIndex: 0, correctCount: 0, wrongCount: 0,
+  answered: false, selectedOptionIdx: null, sessionMistakes: [],
+  timerInterval: null, timeLeft: 0, questionStates: []
+};
+let maleEnglishVoice = null, currentExplainLang = 'ar', currentExplainName = '';
+
+function safeGetLS(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function safeSetLS(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function safeRemoveLS(k){try{localStorage.removeItem(k)}catch(e){}}
+try{transCache=JSON.parse(safeGetLS(TRANS_CACHE_KEY)||'{}')||{};}catch(e){transCache={};}
+
+function saveTransCache(){
+  try{
+    const keys=Object.keys(transCache);
+    if(keys.length>2500)keys.slice(0,500).forEach(k=>delete transCache[k]);
+    safeSetLS(TRANS_CACHE_KEY,JSON.stringify(transCache));
+  }catch(e){}
+}
+
+async function translateEnToAr(text){
+  if(!text)return '';
+  const clean=text.replace(/_{3,}/g,'...').trim();
+  if(transCache[clean])return transCache[clean];
+  try{
+    const res=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ar&dt=t&q='+encodeURIComponent(clean));
+    if(res.ok){
+      const data=await res.json();
+      if(data&&Array.isArray(data[0])){
+        const out=data[0].map(x=>(x&&x[0])?x[0]:'').join('').trim();
+        if(out){transCache[clean]=out;return out;}
+      }
+    }
+  }catch(e){}
+  try{
+    const res2=await fetch('https://api.mymemory.translated.net/get?q='+encodeURIComponent(clean)+'&langpair=en|ar');
+    if(res2.ok){
+      const d2=await res2.json();
+      const out2=d2&&d2.responseData&&d2.responseData.translatedText;
+      if(out2&&out2.trim()){transCache[clean]=out2.trim();return out2.trim();}
+    }
+  }catch(e){}
+  return '';
+}
+
+const AR_LETTERS=['أ) ','ب) ','ج) ','د) '];
+async function ensureQuestionTranslated(q){
+  if(!q||q._transDone)return;
+  let changed=false;
+  const tasks=[];
+  if(!q.ar){tasks.push(translateEnToAr(q.en).then(ar=>{if(ar){q.ar=ar;changed=true;}}));}
+  if(!q.isTF&&q.options){
+    q.options.forEach((opt,i)=>{
+      if(!opt.ar){
+        const m=opt.en.match(/^([A-D]\)\s*)(.*)$/i);
+        const body=m?m[2]:opt.en, prefix=m?(AR_LETTERS[i]||''):'';
+        tasks.push(translateEnToAr(body).then(ar=>{if(ar){opt.ar=prefix+ar;changed=true;}}));
+      }
+    });
+  }
+  if(tasks.length>0){await Promise.all(tasks);if(changed)saveTransCache();}
+  q._transDone=!!(q.ar&&(q.isTF||(q.options&&q.options.every(o=>!!o.ar))));
+}
+
+function prefetchNextQuestions(fromIdx){
+  if(!state.showTranslation)return;
+  [fromIdx+1,fromIdx+2].forEach(i=>{if(i<state.quizQuestions.length)ensureQuestionTranslated(state.quizQuestions[i]);});
+}
+
+function setTheme(t){document.body.classList.toggle('light',t==='light');document.querySelectorAll('.theme-toggle button').forEach(b=>{b.classList.toggle('active',b.dataset.theme===t)});safeSetLS('informatics_theme',t)}
+function loadProgress(){try{const r=safeGetLS(LS_KEY);if(!r)return{attempted:{},mistakes:{}};return JSON.parse(r)}catch(e){return{attempted:{},mistakes:{}}}}
+function saveProgress(p){safeSetLS(LS_KEY,JSON.stringify(p))}
+function qid(s,n){return s+'___'+n}
+
+function showExplanation(name){
+  currentExplainName=name;
+  const box=document.getElementById('section-explanation'),title=document.getElementById('explain-title'),textDiv=document.getElementById('explain-text');
+  const data={
+    "تعريف المصطلحات":{text_ar:"ملخص: الأخلاق هي المبادئ التي تحكم السلوك المهني. القيم هي معايير مجردة. القانون هو تقنين القيم. أخلاقيات التمريض هي واجبات الممرض تجاه المرضى والمهنة والمجتمع.",text_en:"Summary: Ethics are principles governing professional conduct. Values are abstract standards. Law is codification of values. Nursing ethics are duties to patients, profession, and society."},
+    "الفرق بين القانون والأخلاق":{text_ar:"القانون: مصدره خارجي (المجتمع)، يفرضه المحاكم ومجلس التمريض. الأخلاق: مصدرها داخلي (القيم والمعتقدات)، تفرضها لجان الأخلاقيات والمنظمات المهنية.",text_en:"Law: external source (society), enforced by courts/board. Ethics: internal source (values), enforced by ethics committees/professional orgs."},
+    "احترام الأشخاص والاستقلالية":{text_ar:"احترام الأشخاص يعني احترام الاستقلالية (حق الاختيار والحرية). في الطوارئ عندما لا يستطيع المريض التعبير، نفترض موافقته (Presumed consent). يجب دعم قرارات المرضى الأكفاء واتباع التوجيهات المسبقة.",text_en:"Respect for persons means respecting autonomy (right to choose). In emergencies, presumed consent applies. Support competent clients' decisions and follow advance directives."},
+    "عدم الإضرار والإحسان والعدالة":{text_ar:"الإحسان (فعل الخير) وعدم الإضرار (عدم إيذاء) هما سلسلة متصلة. عدم الإضرار له الأسبقية عموماً. العدالة تعني الإنصاف وتوزيع الموارد المحدودة حسب احتياجات المريض وأولويات الممرضات.",text_en:"Beneficence (doing good) and non-maleficence (not harming) form a continuum. Non-maleficence generally takes precedence. Justice means fairness and distributing limited resources based on needs."},
+    "الوفاء والصدق والسرية":{text_ar:"الوفاء: الالتزام بالوعود. الصدق: قول الحقيقة وعدم الخداع. السرية: الحفاظ على خصوصية معلومات المريض.",text_en:"Fidelity: keeping promises. Veracity: telling truth, no deception. Confidentiality: protecting patient privacy."},
+    "المسؤولية والمحاسبة":{text_ar:"المسؤولية: تنفيذ الواجبات المرتبطة بالدور. المحاسبة: المساءلة عن الأفعال وتقييم الأداء ضمن مدونة المهنة.",text_en:"Responsibility: executing role duties. Accountability: being answerable for actions and performance within the code."},
+    "الكفاءة والحكم":{text_ar:"الكفاءة: امتلاك المعرفة والمهارات والطاقة والخبرة والدافع. الحكم: القدرة على تكوين رأي واستخلاص استنتاجات سليمة.",text_en:"Competence: knowledge, skills, energy, experience, motivation. Judgment: ability to form opinions and draw sound conclusions."},
+    "مدونة الأخلاقيات: تعريف ومقدمة":{text_ar:"مدونة الأخلاقيات توضح الأهداف والقيم والالتزامات الأساسية للمهنة، وهي جزء لا يتجزأ من أساس التمريض وتشمل رعاية المرضى والمجتمع.",text_en:"Code of ethics makes explicit goals, values, obligations. Integral to nursing foundation. Covers care for sick and community."},
+    "أغراض مدونة الأخلاقيات":{text_ar:"بيان موجز للالتزامات الأخلاقية لكل ممرض. هي المعيار الأخلاقي غير القابل للتفاوض، وتعبر عن التزام التمريض تجاه المجتمع.",text_en:"Succinct statement of ethical obligations. Nonnegotiable standard. Expresses commitment to society."},
+    "أحكام ANA 1-3":{text_ar:"1: الاحترام والرحمة والكرامة. 2: الالتزام الأساسي للمريض (فرد، أسرة، مجتمع)، الدفاع والخيارات المستنيرة والسرية. 3: حماية حقوق المريض وسلامته، الخصوصية، الموافقة، والإبلاغ عن الأخطاء.",text_en:"1: Respect, compassion, dignity. 2: Primary commitment to patient, advocacy, informed choices, confidentiality. 3: Protect rights/safety, privacy, consent, reporting errors."},
+    "أحكام ANA 4-6":{text_ar:"4: السلطة والمساءلة والمسؤولية (ممارسة كفؤة، تفويض آمن، توثيق). 5: الواجبات تجاه الذات (رعاية ذاتية، تعلم مستمر، نزاهة). 6: بيئة العمل الأخلاقية (احترام، توظيف آمن، معالجة التنمر).",text_en:"4: Authority, accountability, responsibility (competent practice, delegation, documentation). 5: Duties to self (self-care, learning, integrity). 6: Ethical environment (respect, staffing, bullying)."},
+    "أحكام ANA 7-9":{text_ar:"7: تطوير المهنة (بحث، تعليم، ممارسة مبنية على الأدلة). 8: التعاون (حماية حقوق الإنسان، الحد من التفاوتات، شراكات مجتمعية). 9: العدالة الاجتماعية (المناصرة، الوصول العادل).",text_en:"7: Advance profession (research, education, EBP). 8: Collaboration (human rights, reduce disparities, partnerships). 9: Social justice (advocacy, equitable access)."},
+    "المعضلة الأخلاقية: التعريفات":{text_ar:"موقف معقد يتضمن صراعاً بين حتميات أخلاقية، طاعة أحدهما تعني انتهاك الآخر. لا يوجد خيار صحيح أو خاطئ، والأفضل يعتمد على الظروف. الاعتقاد الأخلاقي قناعة شخصية مطلقة.",text_en:"Complex situation with conflict between moral imperatives, obeying one means violating another. No obvious right answer. Moral belief is absolute personal conviction."},
+    "أنواع المعضلات الأخلاقية":{text_ar:"مطلقة (Absolute): تعارض بين معيارين أخلاقيين أو أكثر. تقريبية (Approximate): مواقف معقدة تتضمن صراعات بين القيم والقوانين والسياسات.",text_en:"Absolute: conflict between two or more ethical standards. Approximate: complex situations involving conflicts between values, laws, policies."},
+    "كيفية حل المعضلة الأخلاقية":{text_ar:"يمكن حلها فردياً أو بفريق متعدد التخصصات. التحليل الأولي: تحديد النوع (مطلق/تقريبي)، التمييز بين الأبعاد الشخصية والمهنية. ثم تطبيق نموذج اتخاذ القرار الأخلاقي.",text_en:"Resolved individually or by multidisciplinary team. Preliminary analysis: type (absolute/approximate), personal/professional dimensions. Then apply ethical decision-making model."},
+    "المعضلات الأخلاقية الشائعة":{text_ar:"حرية المريض مقابل سيطرة الممرض، الحقوق الإنجابية، الصدق مقابل المعلومات، إدارة الموارد. مع القاصرين، المسؤولية النهائية للمريض رغم حقوق الوالدين.",text_en:"Patient freedom vs. control, reproductive rights, honesty vs. information, resource management. With minors, ultimate responsibility to patient despite parental rights."},
+    "القتل الرحيم والاستنساخ":{text_ar:"القتل الرحيم: موت لطيف. النشط (إحداث الموت) مقابل السلبي (تركه يموت). الطوعي (بطلب كفء)، غير الطوعي (ضد الرغبة)، اللاإرادي (غير معروفة الرغبة). الاستنساخ يقلل التنوع الوراثي.",text_en:"Euthanasia: gentle death. Active vs passive. Voluntary, involuntary, non-voluntary. Cloning reduces genetic diversity."},
+    "الإجهاض والموت الدماغي":{text_ar:"الإجهاض: إنهاء الحمل قبل قابلية الجنين (6 أشهر). الموت الدماغي: غيبوبة عميقة، توقف التنفس التلقائي (على جهاز)، لكن القلب قد ينبض. يجب استبعاد انخفاض الحرارة والأدوية المثبطة.",text_en:"Abortion: termination before viability (6 months). Brain death: deep coma, no spontaneous breathing (on ventilator), heart may beat. Exclude hypothermia/depressants."},
+    "الصراعات الأخلاقية وعواقب السلوك غير الأخلاقي":{text_ar:"مثال: الصدق مقابل عدم الإضرار (أخبار السرطان). عدم قول الحقيقة ينتهك الاستقلالية. السلوك غير الأخلاقي يؤدي لدعاوى قضائية، تدمير المهن، وإساءة سمعة المؤسسة.",text_en:"Example: veracity vs non-maleficence (cancer news). Not telling truth violates autonomy. Unethical behavior leads to lawsuits, ruined careers, damaged reputation."},
+    "الأطر الأخلاقية لاتخاذ القرار":{text_ar:"الأطر توجه وتوضح القيم دون حل المشكلة. أربعة أطر: النفعية (أكبر خير لأكبر عدد)، الواجبية (كانط - بغض النظر عن العواقب)، الحقوق (مستحقات عادلة)، الحدسية (وزن الحالات بالحدس).",text_en:"Frameworks guide values without solving. Four: Utilitarianism (greatest good), Deontological (Kant - regardless of consequences), Rights-based, Intuitionism."},
+    "حل المشكلات الأخلاقية ودور مدير التمريض":{text_ar:"تقييم القرار بالعملية وليس بالنتيجة فقط. أفضل القرارات تأتي من حل منظم وجمع بيانات. مدير التمريض: ينشئ مدونة أخلاقيات، يضع سياسات، يكافئ السلوك الأخلاقي ويعاقب غير الأخلاقي.",text_en:"Evaluate decision by process, not just outcome. Best decisions from structured problem solving. Nurse manager: creates code, policies, rewards ethical and punishes unethical behavior."}
+  };
+  const d=data[name];title.textContent=name;
+  if(!d){textDiv.textContent=currentExplainLang==='ar'?'لا يوجد شرح':'No explanation.';box.classList.add('show');updateExplainTextClass();return;}
+  const txt=currentExplainLang==='ar'?d.text_ar:d.text_en;
+  textDiv.innerHTML=txt.replace(/\n/g,'<br>');updateExplainTextClass();box.classList.add('show');
+}
+function updateExplainTextClass(){const t=document.getElementById('explain-text');t.classList.remove('ar','en');t.classList.add(currentExplainLang);}
+function closeExplanation(){document.getElementById('section-explanation').classList.remove('show');}
+function setExplainLang(l){currentExplainLang=l;document.querySelectorAll('.explain-controls .lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===l)});if(currentExplainName)showExplanation(currentExplainName);}
+
+function updateHomeStats(){
+  const p=loadProgress(),keys=Object.keys(p.attempted||{});let c=0,w=0;
+  keys.forEach(k=>{if(p.attempted[k]==='correct')c++;else w++});
+  const total=keys.length,pct=total?Math.round((c/total)*100):0;
+  document.getElementById('statAttempted').textContent=total;
+  document.getElementById('statCorrect').textContent=c;
+  document.getElementById('statWrong').textContent=w;
+  document.getElementById('progressPercent').innerHTML=pct+'<small>%</small>';
+  document.getElementById('progressCircle').style.strokeDashoffset=176-(pct/100)*176;
+  updateWeakSectionSuggestion(p);
+}
+
+function updateWeakSectionSuggestion(p){
+  const att=p.attempted||{};let bestIdx=-1,bestRate=0,bestName='';
+  QUESTION_BANK.forEach((sec,idx)=>{
+    let a=0,w=0;sec.questions.forEach(q=>{const k=qid(sec.name,q.num);if(att[k]!==undefined){a++;if(att[k]==='wrong')w++}});
+    if(a>=2){const rate=w/a;if(rate>bestRate){bestRate=rate;bestIdx=idx;bestName=sec.name}}
+  });
+  const link=document.getElementById('weakLink');
+  if(bestIdx>=0&&bestRate>0){
+    link.style.display='flex';document.getElementById('weakSectionName').textContent=bestName;
+    document.getElementById('weakSectionRate').textContent=Math.round(bestRate*100)+'%';link.dataset.sectionIdx=bestIdx;
+  }else link.style.display='none';
+}
+
+function buildSectionList(){
+  const wrap=document.getElementById('section-list');if(!wrap)return;wrap.innerHTML='';
+  QUESTION_BANK.forEach((sec,idx)=>{
+    const div=document.createElement('div');div.className='section-item active';div.dataset.idx=idx;
+    const nameSpan=document.createElement('span');nameSpan.textContent=sec.nameEn;
+    const infoBtn=document.createElement('button');infoBtn.className='info-btn';infoBtn.type='button';infoBtn.innerHTML='<i class="fas fa-info-circle"></i>';infoBtn.title="شرح القسم";
+    infoBtn.onclick=(e)=>{e.stopPropagation();showExplanation(sec.originalName)};
+    const cntSpan=document.createElement('span');cntSpan.className='cnt';cntSpan.textContent=sec.questions.length;
+    div.appendChild(nameSpan);div.appendChild(infoBtn);div.appendChild(cntSpan);
+    div.onclick=()=>{div.classList.toggle('active');updateToggleAllButton();};
+    wrap.appendChild(div);
+  });
+  updateToggleAllButton();
+}
+
+function toggleAllSections(){
+  const items=document.querySelectorAll('#section-list .section-item');
+  const allActive=Array.from(items).every(el=>el.classList.contains('active'));
+  items.forEach(el=>el.classList.toggle('active',!allActive));updateToggleAllButton();
+}
+function updateToggleAllButton(){
+  const items=document.querySelectorAll('#section-list .section-item');
+  const activeCount=document.querySelectorAll('#section-list .section-item.active').length;
+  const btn=document.getElementById('selectAllBtn');
+  if(btn)btn.textContent=(activeCount===items.length&&items.length>0)?'إلغاء الكل':'تحديد الكل';
+}
+
+function toggleOptions(t){
+  document.querySelectorAll('.sub-options').forEach(e=>e.classList.remove('show'));
+  const target=document.getElementById(t);if(target)target.classList.add('show');
+  document.querySelectorAll('.action-icon').forEach(e=>e.classList.remove('active'));
+  const activeIcon=document.querySelector(`.action-icon[data-target="${t}"]`);if(activeIcon)activeIcon.classList.add('active');
+}
+function closeAllOptions(){
+  document.querySelectorAll('.sub-options').forEach(e=>e.classList.remove('show'));
+  document.querySelectorAll('.action-icon').forEach(e=>e.classList.remove('active'));
+  const def=document.querySelector('.action-icon[data-target="modeOptions"]');if(def)def.classList.add('active');
+}
+function selectMode(m){state.mode=m;document.querySelectorAll('#modeOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.mode===m)});closeAllOptions();}
+function selectOrder(o){state.order=o;document.querySelectorAll('#orderOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.order===o)});closeAllOptions();}
+function selectTranslate(t){state.showTranslation=(t==='yes');document.querySelectorAll('#langOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.translate===t)});closeAllOptions();}
+function selectTimer(s){state.timerSeconds=s;document.querySelectorAll('#timerOptions .action-btn').forEach(e=>{e.classList.toggle('active',parseInt(e.dataset.timer)===s)});closeAllOptions();}
+function toggleQuizTranslation(){
+  state.showTranslation=!state.showTranslation;
+  document.querySelectorAll('#langOptions .action-btn').forEach(e=>{e.classList.toggle('active',(e.dataset.translate==='yes')===state.showTranslation)});
+  renderQuestion();
+}
+
+function enterApp(){
+  try{
+    document.getElementById('main-screen').style.display='block';
+    buildSectionList();updateHomeStats();
+    setTheme(safeGetLS('informatics_theme')||'dark');
+    if(window.speechSynthesis){
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged=()=>{window.speechSynthesis.getVoices();maleEnglishVoice=null;};
+    }
+  }catch(err){
+    const wrap=document.getElementById('section-list');
+    if(wrap)wrap.innerHTML='<div style="color:#ef5350;padding:10px;">خطأ: '+err.message+'</div>';
+  }
+}
+function goHome(){stopTimer();document.getElementById('screen-quiz').classList.remove('active');document.getElementById('screen-results').classList.remove('active');document.getElementById('main-screen').style.display='block';updateHomeStats();}
+function quitQuiz(){if(confirm('متأكد تخرج؟')){stopTimer();goHome();}}
+function resetProgress(){if(confirm('متأكد تصفير التقدم؟')){safeRemoveLS(LS_KEY);updateHomeStats();}}
+function shuffleArray(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;}
+
+function startQuiz(){
+  const activeEls=document.querySelectorAll('#section-list .section-item.active');
+  if(activeEls.length===0){alert('اختار جزء واحد على الأقل!');return;}
+  const idxs=Array.from(activeEls).map(el=>parseInt(el.dataset.idx));
+  let qs=[];
+  idxs.forEach(idx=>{
+    const sec=QUESTION_BANK[idx];
+    sec.questions.forEach(q=>{
+      qs.push(Object.assign({},q,{sectionName:sec.name,options:q.options?q.options.map(o=>Object.assign({},o)):undefined}));
+    });
+  });
+  if(qs.length===0){alert('هذا القسم لا يحتوي على أسئلة!');return;}
+  if(state.order==='random')qs=shuffleArray(qs);
+  state.quizQuestions=qs;state.currentIndex=0;state.correctCount=0;state.wrongCount=0;state.sessionMistakes=[];
+  state.questionStates=qs.map(()=>({selectedOption:null,answered:false,isCorrect:false,chosenIdxs:[]}));
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('screen-quiz').classList.add('active');
+  document.getElementById('screen-results').classList.remove('active');
+  const gridContainer=document.getElementById('questions-grid-container');if(gridContainer)gridContainer.classList.remove('show');
+  renderQuestion();
+}
+
+function reviewMistakes(){
+  const p=loadProgress();const mistakeKeys=Object.keys(p.mistakes||{});
+  if(mistakeKeys.length===0){alert('مفيش أخطاء للمراجعة 🎉');return;}
+  let qs=[];
+  QUESTION_BANK.forEach(sec=>{
+    sec.questions.forEach(q=>{
+      const k=qid(sec.name,q.num);
+      if(mistakeKeys.includes(k))qs.push(Object.assign({},q,{sectionName:sec.name,options:q.options?q.options.map(o=>Object.assign({},o)):undefined}));
+    });
+  });
+  if(qs.length===0){alert('مفيش أخطاء للمراجعة 🎉');return;}
+  state.quizQuestions=qs;state.currentIndex=0;state.correctCount=0;state.wrongCount=0;state.sessionMistakes=[];state.mode='practice';
+  state.questionStates=qs.map(()=>({selectedOption:null,answered:false,isCorrect:false,chosenIdxs:[]}));
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('screen-quiz').classList.add('active');
+  document.getElementById('screen-results').classList.remove('active');
+  const gridContainer=document.getElementById('questions-grid-container');if(gridContainer)gridContainer.classList.remove('show');
+  renderQuestion();
+}
+
+function startWeakSectionQuiz(){
+  const link=document.getElementById('weakLink');const idx=link.dataset.sectionIdx;if(idx===undefined)return;
+  document.querySelectorAll('#section-list .section-item').forEach(el=>{el.classList.toggle('active',el.dataset.idx==idx)});
+  startQuiz();
+}
+
+function toggleQuestionsGrid(){
+  const gridContainer=document.getElementById('questions-grid-container');if(!gridContainer)return;
+  gridContainer.classList.toggle('show');
+  if(gridContainer.classList.contains('show'))renderGridButtons();
+}
+
+function renderGridButtons(){
+  const gridDiv=document.getElementById('q-grid-buttons');if(!gridDiv)return;gridDiv.innerHTML='';
+  state.quizQuestions.forEach((q,i)=>{
+    const btn=document.createElement('button');btn.className='grid-btn';
+    if(q.isNew)btn.classList.add('new-question');
+    btn.textContent=i+1;
+    const st=state.questionStates[i];
+    if(i===state.currentIndex)btn.classList.add('current');
+    if(st.answered)btn.classList.add(st.isCorrect?'answered-correct':'answered-wrong');
+    btn.onclick=()=>goToSpecificQuestion(i);
+    gridDiv.appendChild(btn);
+  });
+}
+
+function goToSpecificQuestion(targetIndex){if(targetIndex>=0&&targetIndex<state.quizQuestions.length){state.currentIndex=targetIndex;renderQuestion();}}
+
+function renderQuestion(){
+  const idx=state.currentIndex,q=state.quizQuestions[idx],st=state.questionStates[idx];
+  state.answered=st.answered;state.selectedOptionIdx=st.selectedOption;
+  const total=state.quizQuestions.length;
+  document.getElementById('quiz-position').innerHTML=`<i class="fas fa-question-circle"></i> ${idx+1} / ${total}`;
+  document.getElementById('quiz-score').innerHTML=`<i class="fas fa-check-circle" style="color:var(--success);"></i> ${state.correctCount} <i class="fas fa-times-circle" style="color:var(--danger);margin-right:4px;"></i> ${state.wrongCount}`;
+  document.getElementById('progress-bar').style.width=(idx/total*100)+'%';
+  let tagText=`<i class="fas fa-tag"></i> ${q.sectionName}`;
+  if(q.isTF)tagText+=` <span class="tf-badge">صواب / خطأ</span>`;
+  document.getElementById('q-section-tag').innerHTML=tagText;
+  const transBtn=document.getElementById('btn-toggle-trans');
+  if(transBtn)transBtn.innerHTML=state.showTranslation?'<i class="fas fa-language"></i> ترجمة: مفعّلة':'<i class="fas fa-language"></i> EN فقط';
+  const gridToggleBtn=document.getElementById('btn-toggle-grid'),gridContainer=document.getElementById('questions-grid-container');
+  if(state.mode==='practice'){if(gridToggleBtn)gridToggleBtn.style.display='inline-flex';if(gridContainer&&gridContainer.classList.contains('show'))renderGridButtons();}
+  else{if(gridToggleBtn)gridToggleBtn.style.display='none';if(gridContainer)gridContainer.classList.remove('show');}
+
+  const qEn=document.getElementById('q-en');qEn.classList.toggle('new-question',!!q.isNew);wrapEnglishText(`${q.num}. ${q.en}`,qEn);
+  const qAr=document.getElementById('q-ar');qAr.classList.toggle('new-question',!!q.isNew);
+  if(state.showTranslation){qAr.textContent=q.ar||'جارٍ الترجمة...';qAr.style.display='block';}
+  else{qAr.textContent='';qAr.style.display='none';}
+
+  const opts=document.getElementById('options');opts.innerHTML='';
+  if(q.isTF){
+    [{en:"True",ar:"صواب"},{en:"False",ar:"خطأ"}].forEach((opt,i)=>{
+      const div=document.createElement('div');div.className='option';div.dataset.idx=i;
+      div.dataset.correct=((i===0)?q.correct===true:q.correct===false)?'true':'false';
+      const enDiv=document.createElement('div');enDiv.className='opt-en';wrapEnglishText(opt.en,enDiv);
+      const arDiv=document.createElement('div');arDiv.className='opt-ar';arDiv.textContent=opt.ar||'';arDiv.style.display=state.showTranslation&&opt.ar?'block':'none';
+      const mark=document.createElement('span');mark.className='mark';
+      div.appendChild(enDiv);div.appendChild(arDiv);div.appendChild(mark);
+      div.onclick=()=>onOptionClick(i);opts.appendChild(div);
+    });
+  }else{
+    q.options.forEach((opt,i)=>{
+      const div=document.createElement('div');div.className='option';div.dataset.idx=i;div.dataset.correct=opt.correct?'true':'false';
+      const enDiv=document.createElement('div');enDiv.className='opt-en';wrapEnglishText(opt.en,enDiv);
+      const arDiv=document.createElement('div');arDiv.className='opt-ar';arDiv.textContent=opt.ar||'';arDiv.style.display=state.showTranslation&&opt.ar?'block':'none';
+      const mark=document.createElement('span');mark.className='mark';
+      div.appendChild(enDiv);div.appendChild(arDiv);div.appendChild(mark);
+      div.onclick=()=>onOptionClick(i);opts.appendChild(div);
+    });
+  }
+
+  if(state.showTranslation){
+    if(!q._transDone){
+      ensureQuestionTranslated(q).then(()=>{
+        if(state.currentIndex!==idx||!state.showTranslation)return;
+        qAr.textContent=q.ar||'';qAr.style.display=q.ar?'block':'none';
+        if(!q.isTF&&q.options){
+          const optEls=opts.querySelectorAll('.option');
+          q.options.forEach((opt,i)=>{
+            if(optEls[i]){const arEl=optEls[i].querySelector('.opt-ar');if(arEl){arEl.textContent=opt.ar||'';arEl.style.display=opt.ar?'block':'none';}}
+          });
+        }
+      });
+    }
+    prefetchNextQuestions(idx);
+  }
+
+  if(st.answered){
+    const chosenIdxs=st.chosenIdxs;
+    document.querySelectorAll('.option').forEach(el=>{
+      const idxOpt=parseInt(el.dataset.idx);el.classList.add('disabled');
+      if(el.dataset.correct==='true'){el.classList.add('correct');el.querySelector('.mark').textContent='✅';}
+      else if(chosenIdxs.includes(idxOpt)){el.classList.add('wrong');el.querySelector('.mark').textContent='❌';}
+      if(st.selectedOption===idxOpt)el.classList.add('selected');
+    });
+    const fb=document.getElementById('feedback');fb.classList.remove('hidden');fb.className='feedback-box '+(st.isCorrect?'correct':'wrong');
+    let correctLabels=q.isTF?(q.correct?'True (صواب)':'False (خطأ)'):q.options.map(o=>o.correct?o.en:null).filter(Boolean).join('، ');
+    fb.innerHTML=`<div class="fb-title">${st.isCorrect?'✅ صحيحة!':'❌ غلط'}</div>${!st.isCorrect?`<div><b>الصح:</b> ${correctLabels}</div>`:''}<div class="fb-explain">💡 ${q.explain_ar||''}</div>`;
+  }else{
+    document.getElementById('feedback').classList.add('hidden');document.getElementById('feedback').innerHTML='';
+  }
+
+  const nextBtn=document.getElementById('btn-next'),prevBtn=document.getElementById('btn-prev');
+  prevBtn.disabled=(idx===0);const isLast=idx===total-1;
+  if(state.mode==='test'){
+    nextBtn.disabled=(state.selectedOptionIdx===null);
+    nextBtn.innerHTML=`<i class="fas fa-arrow-left"></i> ${isLast?'إنهاء ✅':'التالي ⬅️'}`;
+    nextBtn.onclick=()=>{
+      if(state.selectedOptionIdx===null)return;
+      if(!state.answered){
+        const q2=state.quizQuestions[state.currentIndex];
+        const isCorrect=q2.isTF?((document.querySelector(`.option[data-idx="${state.selectedOptionIdx}"]`)||{}).dataset?.correct==='true'):q2.options[state.selectedOptionIdx].correct;
+        finalizeAnswer(isCorrect,[state.selectedOptionIdx]);
+      }
+      if(state.currentIndex<state.quizQuestions.length-1){state.currentIndex++;renderQuestion();}else{showResults();}
+    };
+  }else{
+    nextBtn.disabled=false;
+    nextBtn.innerHTML=isLast?`<i class="fas fa-flag-checkered"></i> إنهاء`:`<i class="fas fa-arrow-left"></i> التالي`;
+    nextBtn.onclick=()=>{
+      if(!state.answered){alert('يجب اختيار إجابة أولاً!');return;}
+      if(state.currentIndex<state.quizQuestions.length-1){state.currentIndex++;renderQuestion();}else{showResults();}
+    };
+  }
+  if(!st.answered)startTimer();else stopTimer();
+}
+
+function onOptionClick(i){
+  if(state.answered)return;state.selectedOptionIdx=i;
+  document.querySelectorAll('.option').forEach(el=>el.classList.remove('selected'));
+  document.querySelector(`.option[data-idx="${i}"]`).classList.add('selected');
+  if(state.mode==='test'){document.getElementById('btn-next').disabled=false;}else{submitSingleAnswer(i);}
+}
+function submitSingleAnswer(i){
+  const q=state.quizQuestions[state.currentIndex];
+  const isCorrect=q.isTF?(document.querySelector(`.option[data-idx="${i}"]`).dataset.correct==='true'):!!q.options[i].correct;
+  finalizeAnswer(isCorrect,[i]);
+}
+function finalizeAnswer(isCorrect,chosenIdxs){
+  stopTimer();state.answered=true;
+  const idx=state.currentIndex,st=state.questionStates[idx],q=state.quizQuestions[idx];
+  st.selectedOption=state.selectedOptionIdx;st.answered=true;st.isCorrect=isCorrect;st.chosenIdxs=chosenIdxs;
+  if(isCorrect)state.correctCount++;else state.wrongCount++;
+  const p=loadProgress(),key=qid(q.sectionName,q.num);
+  p.attempted=p.attempted||{};p.mistakes=p.mistakes||{};p.attempted[key]=isCorrect?'correct':'wrong';
+  if(isCorrect)delete p.mistakes[key];else p.mistakes[key]=true;
+  saveProgress(p);
+  if(!isCorrect)state.sessionMistakes.push({q,chosenIdxs});
+  renderQuestion();
+}
+function previousQuestion(){if(state.currentIndex>0){state.currentIndex--;renderQuestion();}}
+
+function showResults(){
+  stopTimer();document.getElementById('screen-quiz').classList.remove('active');
+  document.getElementById('screen-results').classList.add('active');document.getElementById('mistakes-list-wrap').classList.add('hidden');
+  const total=state.quizQuestions.length,pct=total?Math.round((state.correctCount/total)*100):0;
+  document.getElementById('result-pct').textContent=pct+'%';document.getElementById('score-circle').style.setProperty('--pct',pct);
+  document.getElementById('res-total').textContent=total;document.getElementById('res-correct').textContent=state.correctCount;document.getElementById('res-wrong').textContent=state.wrongCount;
+  document.getElementById('btn-show-mistakes').classList.toggle('hidden',state.sessionMistakes.length===0);
+}
+
+function showMistakesList(){
+  const wrap=document.getElementById('mistakes-list-wrap'),list=document.getElementById('mistakes-list');list.innerHTML='';
+  state.sessionMistakes.forEach(m=>{
+    const q=m.q;let yourAnswers='',correctAnswers='';
+    if(q.isTF){
+      yourAnswers=m.chosenIdxs.map(i=>i===0?'True':'False').join('، ');
+      correctAnswers=q.correct?'True (صواب)':'False (خطأ)';
+    }else{
+      yourAnswers=m.chosenIdxs.map(i=>q.options[i].en).join('، ');
+      correctAnswers=q.options.map(o=>o.correct?o.en:null).filter(Boolean).join('، ');
+    }
+    const div=document.createElement('div');div.className='mistake-item';
+    const toggleBtn=document.createElement('button');toggleBtn.className='mistake-toggle';toggleBtn.innerHTML='<i class="fas fa-eye"></i> عرض السؤال';
+    const detailDiv=document.createElement('div');detailDiv.className='mistake-detail';detailDiv.style.display='none';
+    const qHeader=document.createElement('div');qHeader.style.fontWeight='bold';qHeader.style.marginBottom='8px';qHeader.textContent=`${q.num}. ${q.en}`;detailDiv.appendChild(qHeader);
+    if(q.ar){const qArH=document.createElement('div');qArH.style.color='var(--muted)';qArH.style.marginBottom='8px';qArH.style.direction='rtl';qArH.style.textAlign='right';qArH.textContent=q.ar;detailDiv.appendChild(qArH);}
+    const optsDiv=document.createElement('div');
+    const listOpts=q.isTF?[{en:"True (صواب)",correct:q.correct===true},{en:"False (خطأ)",correct:q.correct===false}]:q.options;
+    listOpts.forEach((opt,i)=>{
+      const row=document.createElement('div');row.className='opt-row';
+      const label=document.createElement('span');label.className='opt-label';label.textContent=opt.en+(!q.isTF&&opt.ar?' — '+opt.ar:'');
+      const status=document.createElement('span');status.className='opt-status';
+      if(opt.correct){status.textContent='✅';status.style.color='var(--success)';}
+      else if(m.chosenIdxs.includes(i)){status.textContent='❌';status.style.color='var(--danger)';}
+      else{status.textContent='—';status.style.color='var(--muted)';}
+      row.appendChild(label);row.appendChild(status);optsDiv.appendChild(row);
+    });
+    detailDiv.appendChild(optsDiv);
+    const explainDiv=document.createElement('div');explainDiv.style.marginTop='8px';explainDiv.style.fontStyle='italic';explainDiv.style.color='var(--muted)';explainDiv.style.direction='rtl';explainDiv.style.textAlign='right';explainDiv.textContent=`💡 ${q.explain_ar||''}`;detailDiv.appendChild(explainDiv);
+    toggleBtn.onclick=()=>{const vis=detailDiv.style.display!=='none';detailDiv.style.display=vis?'none':'block';toggleBtn.innerHTML=vis?'<i class="fas fa-eye"></i> عرض السؤال':'<i class="fas fa-eye-slash"></i> إخفاء السؤال';};
+    div.innerHTML=`<div class="m-q">${q.num}. ${q.en}</div><div class="m-you">إجابتك: ${yourAnswers||'لم تجب'}</div><div class="m-correct">الصح: ${correctAnswers}</div>`;
+    div.appendChild(toggleBtn);div.appendChild(detailDiv);list.appendChild(div);
+  });
+  wrap.classList.remove('hidden');wrap.scrollIntoView({behavior:'smooth'});
+}
+
+function stopTimer(){if(state.timerInterval){clearInterval(state.timerInterval);state.timerInterval=null;}const b=document.getElementById('timer-badge');b.classList.add('hidden');b.classList.remove('warn','danger');}
+function startTimer(){stopTimer();if(!state.timerSeconds||state.timerSeconds<=0)return;const badge=document.getElementById('timer-badge');state.timeLeft=state.timerSeconds;badge.classList.remove('hidden','warn','danger');badge.innerHTML=`<i class="fas fa-hourglass-half"></i> ${state.timeLeft}`;state.timerInterval=setInterval(()=>{state.timeLeft--;if(state.timeLeft<=0){badge.innerHTML=`<i class="fas fa-hourglass-end"></i> 0`;stopTimer();onTimeUp();return;}badge.innerHTML=`<i class="fas fa-hourglass-half"></i> ${state.timeLeft}`;badge.classList.toggle('warn',state.timeLeft<=3&&state.timeLeft>1);badge.classList.toggle('danger',state.timeLeft<=1);},1000);}
+function onTimeUp(){if(state.answered)return;finalizeAnswer(false,state.selectedOptionIdx!==null?[state.selectedOptionIdx]:[]);}
+
+function getMaleEnglishVoice(){if(maleEnglishVoice)return maleEnglishVoice;const voices=window.speechSynthesis.getVoices();let v=voices.find(v=>v.lang==='en-US'&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang==='en-GB'&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang.startsWith('en')&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang.startsWith('en'));maleEnglishVoice=v;return v;}
+function speakWord(word){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(word);u.lang='en-US';u.rate=.7;u.pitch=1;u.volume=1;const v=getMaleEnglishVoice();if(v)u.voice=v;window.speechSynthesis.speak(u);}
+
+function wrapEnglishText(text,container){
+  if(!container)return;container.innerHTML='';if(!text)return;
+  const tempDiv=document.createElement('div');tempDiv.innerHTML=text;
+  function processNodes(node,target){
+    node.childNodes.forEach(child=>{
+      if(child.nodeType===Node.TEXT_NODE){
+        const words=child.textContent.split(' ');
+        words.forEach((word,idx)=>{
+          if(word.trim()===''){target.appendChild(document.createTextNode(' '));return;}
+          const span=document.createElement('span');span.className='word-en';span.textContent=word;
+          let pressTimer=null;
+          const startPress=()=>{pressTimer=setTimeout(()=>{speakWord(word.replace(/[^a-zA-Z]/g,''));span.classList.add('speaking');setTimeout(()=>span.classList.remove('speaking'),600);const hint=document.getElementById('speech-hint');hint.textContent=`🔊 ${word}`;hint.classList.add('show');setTimeout(()=>hint.classList.remove('show'),900);},800);};
+          const endPress=()=>{if(pressTimer){clearTimeout(pressTimer);pressTimer=null;}};
+          span.addEventListener('pointerdown',startPress);span.addEventListener('pointerup',endPress);span.addEventListener('pointerleave',endPress);
+          span.addEventListener('touchstart',startPress,{passive:true});span.addEventListener('touchend',endPress,{passive:true});
+          target.appendChild(span);
+          if(idx<words.length-1)target.appendChild(document.createTextNode(' '));
+        });
+      }else if(child.nodeType===Node.ELEMENT_NODE){
+        const clone=child.cloneNode(false);target.appendChild(clone);processNodes(child,clone);
+      }
+    });
+  }
+  processNodes(tempDiv,container);
+}
+
+document.addEventListener('click',function(e){const btn=e.target.closest('.big-btn');if(!btn)return;const rect=btn.getBoundingClientRect();const ripple=document.createElement('span');ripple.className='ripple';const size=Math.max(rect.width,rect.height);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';btn.appendChild(ripple);setTimeout(()=>ripple.remove(),500);});
+
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',enterApp);}else{enterApp();}
+</script>
+<script>
+(function () {
+  if (typeof QUESTION_BANK === "undefined" || QUESTION_BANK.length <= 3) return;
+
+  var L1_NAMES = [
+    "تعريف المصطلحات", "الفرق بين القانون والأخلاق", "احترام الأشخاص والاستقلالية",
+    "عدم الإضرار والإحسان والعدالة", "الوفاء والصدق والسرية", "المسؤولية والمحاسبة", "الكفاءة والحكم"
+  ];
+  var L2_NAMES = [
+    "مدونة الأخلاقيات: تعريف ومقدمة", "أغراض مدونة الأخلاقيات",
+    "أحكام ANA 1-3", "أحكام ANA 4-6", "أحكام ANA 7-9"
+  ];
+  var L3_NAMES = [
+    "المعضلة الأخلاقية: التعريفات", "أنواع المعضلات الأخلاقية", "كيفية حل المعضلة الأخلاقية",
+    "المعضلات الأخلاقية الشائعة", "القتل الرحيم والاستنساخ", "الإجهاض والموت الدماغي",
+    "الصراعات الأخلاقية وعواقب السلوك غير الأخلاقي", "الأطر الأخلاقية لاتخاذ القرار",
+    "حل المشكلات الأخلاقية ودور مدير التمريض"
+  ];
+
+  var q1 = [], q2 = [], q3 = [];
+  QUESTION_BANK.forEach(function (sec) {
+    if (L1_NAMES.indexOf(sec.originalName) !== -1) q1 = q1.concat(sec.questions);
+    else if (L2_NAMES.indexOf(sec.originalName) !== -1) q2 = q2.concat(sec.questions);
+    else if (L3_NAMES.indexOf(sec.originalName) !== -1) q3 = q3.concat(sec.questions);
+  });
+
+  function renum(arr) {
+    return arr.map(function (q, i) { return Object.assign({}, q, { num: i + 1 }); });
+  }
+
+  var lectures3 = [
+    {
+      name: "المحاضرة 1: Ethical Concepts & Principles",
+      nameEn: "المحاضرة الأولى - Lecture 1: Ethical Concepts & Principles",
+      originalName: "المحاضرة 1: Ethical Concepts & Principles",
+      questions: renum(q1)
+    },
+    {
+      name: "المحاضرة 2: Code of Ethics (ANA)",
+      nameEn: "المحاضرة الثانية - Lecture 2: Code of Ethics (ANA)",
+      originalName: "المحاضرة 2: Code of Ethics (ANA)",
+      questions: renum(q2)
+    },
+    {
+      name: "المحاضرة 3: Ethical Dilemmas & Frameworks",
+      nameEn: "المحاضرة الثالثة - Lecture 3: Ethical Dilemmas & Frameworks",
+      originalName: "المحاضرة 3: Ethical Dilemmas & Frameworks",
+      questions: renum(q3)
+    }
+  ];
+
+  QUESTION_BANK.splice(0, QUESTION_BANK.length, lectures3[0], lectures3[1], lectures3[2]);
+
+  var LECTURE_SUMMARIES = {
+    "المحاضرة 1: Ethical Concepts & Principles": {
+      text_ar: "المحاضرة الأولى (137 سؤالاً):\n• تعريف الأخلاق والقيم والقانون وأخلاقيات التمريض.\n• الفرق بين القانون (مصدره خارجي وتفرضه المحاكم ومجلس التمريض) والأخلاق (مصدرها داخلي وتفرضها اللجان والمنظمات المهنية).\n• المبادئ الأخلاقية: احترام الأشخاص والاستقلالية، الموافقة المفترضة، عدم الإضرار، الإحسان، العدالة، الوفاء، الصدق، السرية، المسؤولية والمحاسبة، الكفاءة والحكم.",
+      text_en: "Lecture 1 (137 Questions):\n• Definitions of Ethics, Values, Law, and Nursing Ethics.\n• Law vs. Ethics (sources and enforcement).\n• Ethical Principles: Respect for persons & Autonomy, Presumed consent, Non-maleficence, Beneficence, Justice, Fidelity, Veracity, Confidentiality, Responsibility & Accountability, Competence & Judgment."
+    },
+    "المحاضرة 2: Code of Ethics (ANA)": {
+      text_ar: "المحاضرة الثانية (79 سؤالاً):\n• تعريف مدونة الأخلاقيات وأغراضها بوصفها المعيار غير القابل للتفاوض والتزام المهنة تجاه المجتمع.\n• أحكام ANA التسعة:\n  1-3: الاحترام والكرامة، الالتزام الأساسي للمريض، حماية الحقوق والسلامة.\n  4-6: المساءلة والتفويض الآمن، الواجبات تجاه الذات، بيئة العمل الأخلاقية.\n  7-9: تطوير المهنة والبحث، التعاون وحقوق الإنسان، العدالة الاجتماعية.",
+      text_en: "Lecture 2 (79 Questions):\n• Definition and purposes of the Code of Ethics.\n• ANA Provisions 1–9:\n  1–3: Compassion/respect, primary commitment to patient, rights & safety.\n  4–6: Authority & accountability, duties to self, ethical work environment.\n  7–9: Advancing the profession, collaboration & equity, social justice."
+    },
+    "المحاضرة 3: Ethical Dilemmas & Frameworks": {
+      text_ar: "المحاضرة الثالثة (147 سؤالاً):\n• المعضلة الأخلاقية وأنواعها (المطلقة والتقريبية) وخطوات حلها.\n• المعضلات الشائعة: حرية المريض، الحقوق الإنجابية، الصدق، القاصرون، إدارة الموارد.\n• القضايا الشائكة: القتل الرحيم (النشط/السلبي، الطوعي/غير الطوعي/اللاإرادي)، الاستنساخ، الإجهاض، والموت الدماغي.\n• الصراعات وعواقب السلوك غير الأخلاقي، والأطر الأخلاقية الأربعة، ودور مدير التمريض.",
+      text_en: "Lecture 3 (147 Questions):\n• Ethical dilemmas (Absolute vs. Approximate) and resolution steps.\n• Common dilemmas, Euthanasia, Cloning, Abortion, and Brain Death.\n• Ethical conflicts, consequences of unethical behavior, the 4 Ethical Frameworks, problem solving, and Nurse Manager role."
+    }
+  };
+
+  showExplanation = function (name) {
+    currentExplainName = name;
+    var box = document.getElementById("section-explanation");
+    var title = document.getElementById("explain-title");
+    var textDiv = document.getElementById("explain-text");
+    var d = LECTURE_SUMMARIES[name];
+    title.textContent = name;
+    if (!d) {
+      textDiv.textContent = currentExplainLang === "ar" ? "لا يوجد شرح" : "No explanation.";
+      box.classList.add("show");
+      updateExplainTextClass();
+      return;
+    }
+    textDiv.innerHTML = (currentExplainLang === "ar" ? d.text_ar : d.text_en).replace(/\n/g, "<br>");
+    updateExplainTextClass();
+    box.classList.add("show");
+  };
+
+  buildSectionList();
+  updateHomeStats();
+})();
+</script>
+</body>
+</html>
